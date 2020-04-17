@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:background="#a2e6f0">
+
+    <TextView
+        android:id="@+id/timeline_deaths"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:text="Deaths: "
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#225270"/>
+
+    <TextView
+        android:id="@+id/timeline_deaths_text"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/timeline_deaths"
+        android:text="#"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#225270"/>
+
+    <TextView
+        android:id="@+id/timeline_confirmed"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeline_deaths"
+        android:text="Confirmed: "
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#225270"/>
+
+    <TextView
+        android:id="@+id/timeline_confirmed_text"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeline_deaths_text"
+        android:layout_toEndOf="@id/timeline_confirmed"
+        android:text="#"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#225270"/>
+
+    <TextView
+        android:id="@+id/timeline_recovered"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeline_confirmed"
+        android:text="Recovered: "
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#225270"/>
+
+    <TextView
+        android:id="@+id/timeline_recovered_text"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeline_confirmed_text"
+        android:layout_toEndOf="@id/timeline_recovered"
+        android:text="#"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#225270"/>
+
+</RelativeLayout>
