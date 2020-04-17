@@ -1,71 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp"
-    android:background="#a2e6f0">
+    android:background="#543864"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/timeline_deaths"
-        android:layout_width="65dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deaths: "
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#225270"/>
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
 
-    <TextView
-        android:id="@+id/timeline_deaths_text"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/timeline_deaths"
-        android:text="#"
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="#225270"/>
+        <ImageView
+            android:id="@+id/timeline_updated_on_text"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="sans-serif-medium"
+            android:src="@drawable/ic_time"
+            android:textColor="@color/colorAccent" />
+        <TextView
+            android:id="@+id/timeline_updated_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/timeline_updated_on_text"
+            android:fontFamily="sans-serif-medium"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"/>
 
-    <TextView
-        android:id="@+id/timeline_confirmed"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timeline_deaths"
-        android:text="Confirmed: "
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#225270"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeline_updated_on_text"
+            android:background="@color/colorPrimary"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
 
-    <TextView
-        android:id="@+id/timeline_confirmed_text"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timeline_deaths_text"
-        android:layout_toEndOf="@id/timeline_confirmed"
-        android:text="#"
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="#225270"/>
+            <TextView
+                android:id="@+id/timeline_deaths"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Deaths:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/timeline_recovered"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timeline_confirmed"
-        android:text="Recovered: "
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#225270"/>
+            <TextView
+                android:id="@+id/timeline_deaths_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/timeline_deaths"
+                android:fontFamily="sans-serif-light"
+                android:text="No reported cases."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/timeline_recovered_text"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timeline_confirmed_text"
-        android:layout_toEndOf="@id/timeline_recovered"
-        android:text="#"
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="#225270"/>
+            <TextView
+                android:id="@+id/timeline_confirmed"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeline_deaths"
+                android:fontFamily="sans-serif-medium"
+                android:text="Confirmed:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/timeline_confirmed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeline_deaths_text"
+                android:layout_toEndOf="@id/timeline_confirmed"
+                android:fontFamily="sans-serif-light"
+                android:text="No reported cases."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/timeline_recovered"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeline_confirmed"
+                android:fontFamily="sans-serif-medium"
+                android:text="Recovered: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/timeline_recovered_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeline_confirmed_text"
+                android:layout_toEndOf="@id/timeline_recovered"
+                android:fontFamily="sans-serif-light"
+                android:text="No reported cases."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

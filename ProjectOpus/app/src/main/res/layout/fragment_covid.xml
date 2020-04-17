@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.covid.CovidFragment"
+    android:paddingStart="6dp"
+    android:paddingEnd="8dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <RelativeLayout
+        android:id="@+id/covidInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <LinearLayout
+            android:id="@+id/aboutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/aboutTitle1a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="WHAT IS "
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="38sp" />
+        <TextView
+            android:id="@+id/aboutTitle1b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@color/colorPrimaryDark"
+            android:text=" COVID-19 "
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="38sp" />
+        </LinearLayout>
+
+        <TextView
+        android:id="@+id/aboutContent1a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutTitle"
+        android:fontFamily="@font/montserrat"
+        android:text="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus."
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/aboutContent1b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutContent1a"
+            android:fontFamily="@font/montserrat"
+            android:text="Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/aboutTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutContent1b"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="HOW IT SPREADS"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/aboutContent2a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutTitle2"
+            android:fontFamily="@font/montserrat"
+            android:text="The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/aboutContent2b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutContent2a"
+            android:fontFamily="@font/montserrat"
+            android:text="You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/aboutTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutContent2b"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PREVENTION"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/aboutContent3a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutTitle3"
+            android:fontFamily="@font/montserrat"
+            android:text="Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local public health agency."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/aboutContent3b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutContent3a"
+            android:fontFamily="@font/montserrat"
+            android:text="1.   Clean your hands often. Use soap and water, or an alcohol-based hand rub.\n2.   Maintain a safe distance from anyone who is coughing or sneezing.\n3.   Don’t touch your eyes, nose or mouth.\n4.   Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+    </RelativeLayout>
+</ScrollView>

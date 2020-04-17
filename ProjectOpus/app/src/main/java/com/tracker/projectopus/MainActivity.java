@@ -1,11 +1,24 @@
 package com.tracker.projectopus;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -13,7 +26,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.tracker.projectopus.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,83 +34,45 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private TimelineAdapter timelineAdapter;
-    private ArrayList<TrackerTimeline> timelineArrayList;
-    private RequestQueue requestQueue;
-    private TextView text0,text1,text2,text3;
+    AppBarConfiguration appBarConfiguration;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text0 = findViewById(R.id.data0);
-        text1 = findViewById(R.id.data1);
-        text2 = findViewById(R.id.data2);
-        text3 = findViewById(R.id.data3);
-
-        recyclerView = findViewById(R.id.timeline);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        timelineArrayList = new ArrayList<>();
-        requestQueue = Volley.newRequestQueue(this);
-
-        parseJSON();
-    }
-
-    private void parseJSON() {
-        String url = "https://corona-api.com/countries/PH";
-
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONObject jsonObject = response.getJSONObject("data");
-
-                            JSONObject latest_data = jsonObject.getJSONObject("latest_data");
-
-                            int deaths = latest_data.getInt("deaths");
-                            int confirmed = latest_data.getInt("confirmed");
-                            int recovered = latest_data.getInt("recovered");
-                            int critical = latest_data.getInt("critical");
-
-                            String latest_deaths = ("Deaths: " + deaths);
-                            String latest_confirmed = "Confirmed: " + confirmed;
-                            String latest_recovered = "Recovered: " + recovered;
-                            String latest_critical = "Critical: " + critical;
-
-                            text0.setText(latest_deaths);
-                            text1.setText(latest_confirmed);
-                            text2.setText(latest_recovered);
-                            text3.setText(latest_critical);
-
-                            JSONArray jsonArray = jsonObject.getJSONArray("timeline");
-
-                            for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject data = jsonArray.getJSONObject(i);
-
-                                int timelineDeaths = data.getInt("deaths");
-                                int timelineConfirmed = data.getInt("confirmed");
-                                int timelineRecovered = data.getInt("recovered");
-
-                                timelineArrayList.add(new TrackerTimeline(timelineDeaths, timelineConfirmed, timelineRecovered));
-                            }
-                        timelineAdapter = new TimelineAdapter(MainActivity.this, timelineArrayList);
-                            recyclerView.setAdapter(timelineAdapter);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
 
-        requestQueue.add(request);
+        appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_overview, R.id.nav_covid, R.id.nav_timeline)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_activity, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
+                || super.onSupportNavigateUp();
     }
 }
