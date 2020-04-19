@@ -33,18 +33,22 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.Timeli
         TrackerTimeline trackerTimeline = timelineArrayList.get(position);
 
         int timeline_deaths, timeline_confirmed, timeline_recovered = 0;
+        String timeline_date;
 
-        timeline_deaths = trackerTimeline.getDeaths();
-        timeline_confirmed = trackerTimeline.getConfirmed();
+        timeline_date = trackerTimeline.getDate();
         timeline_recovered = trackerTimeline.getRecovered();
+        timeline_confirmed = trackerTimeline.getConfirmed();
+        timeline_deaths = trackerTimeline.getDeaths();
 
-            String deaths = Integer.toString(timeline_deaths);
-            String confirmed = Integer.toString(timeline_confirmed);
-            String recovered = Integer.toString(timeline_recovered);
+        String date = timeline_date;
+        String recovered = Integer.toString(timeline_recovered);
+        String confirmed = Integer.toString(timeline_confirmed);
+        String deaths = Integer.toString(timeline_deaths);
 
-            holder.timelineDeaths.setText(deaths);
-            holder.timelineDeaths.setText(confirmed);
-            holder.timelineDeaths.setText(recovered);
+        holder.timelineDate.setText(date);
+        holder.timelineDeaths.setText(confirmed);
+        holder.timelineConfirmed.setText(recovered);
+        holder.timelineRecovered.setText(deaths);
     }
 
     @Override
@@ -53,15 +57,17 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.Timeli
     }
 
     public class TimelineViewHolder extends RecyclerView.ViewHolder {
-        public TextView timelineDeaths;
-        public TextView timelineConfirmed;
+        public TextView timelineDate;
         public TextView timelineRecovered;
+        public TextView timelineConfirmed;
+        public TextView timelineDeaths;
 
         public TimelineViewHolder(View itemView) {
             super(itemView);
-            timelineDeaths = itemView.findViewById(R.id.timeline_deaths_text);
-            timelineConfirmed = itemView.findViewById(R.id.timeline_confirmed_text);
+            timelineDate = itemView.findViewById(R.id.timeline_updated_on);
             timelineRecovered = itemView.findViewById(R.id.timeline_recovered_text);
+            timelineConfirmed = itemView.findViewById(R.id.timeline_confirmed_text);
+            timelineDeaths = itemView.findViewById(R.id.timeline_deaths_text);
         }
     }
 }

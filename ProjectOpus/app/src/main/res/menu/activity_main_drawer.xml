@@ -19,10 +19,18 @@
         <item
             android:id="@+id/nav_philippines"
             android:icon="@drawable/ic_philippines"
-            android:title="Philippines" />
+            android:title="Philippines Stats" />
         <item
             android:id="@+id/nav_global"
             android:icon="@drawable/ic_globe"
-            android:title="Global" />
+            android:title="Global Stats" />
+        <item
+            android:id="@+id/nav_links"
+            android:icon="@drawable/ic_opustrack"
+            android:title="Useful Links" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_opustrack"
+            android:title="About Us" />
     </group>
 </menu>

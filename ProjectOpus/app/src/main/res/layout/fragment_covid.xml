@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".ui.covid.CovidFragment"
     android:paddingStart="6dp"
     android:paddingEnd="8dp"
-    android:scrollbarAlwaysDrawVerticalTrack="true">
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".ui.covid.CovidFragment">
 
     <RelativeLayout
         android:id="@+id/covidInfo"
@@ -16,46 +16,51 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp">
+
         <LinearLayout
             android:id="@+id/aboutTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true">
-        <TextView
-            android:id="@+id/aboutTitle1a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="WHAT IS "
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="38sp" />
-        <TextView
-            android:id="@+id/aboutTitle1b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
-            android:background="@color/colorPrimaryDark"
-            android:text=" COVID-19 "
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimary"
-            android:textSize="38sp" />
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/aboutTitle1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="WHAT IS"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/aboutTitle1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=" COVID-19 "
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="50sp" />
         </LinearLayout>
 
         <TextView
-        android:id="@+id/aboutContent1a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/aboutTitle"
-        android:fontFamily="@font/montserrat"
-        android:text="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus."
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="17sp"/>
+            android:id="@+id/aboutContent1a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutTitle"
+            android:fontFamily="@font/montserrat"
+            android:text="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
         <TextView
             android:id="@+id/aboutContent1b"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutContent1a"
             android:fontFamily="@font/montserrat"
@@ -65,18 +70,18 @@
 
         <TextView
             android:id="@+id/aboutTitle2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutContent1b"
             android:fontFamily="@font/montserrat_bold"
             android:text="HOW IT SPREADS"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"/>
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/aboutContent2a"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutTitle2"
             android:fontFamily="@font/montserrat"
@@ -86,7 +91,7 @@
 
         <TextView
             android:id="@+id/aboutContent2b"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutContent2a"
             android:fontFamily="@font/montserrat"
@@ -96,18 +101,18 @@
 
         <TextView
             android:id="@+id/aboutTitle3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/aboutContent2b"
             android:fontFamily="@font/montserrat_bold"
             android:text="PREVENTION"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"/>
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/aboutContent3a"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutTitle3"
             android:fontFamily="@font/montserrat"
@@ -117,12 +122,57 @@
 
         <TextView
             android:id="@+id/aboutContent3b"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/aboutContent3a"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
             android:fontFamily="@font/montserrat"
-            android:text="1.   Clean your hands often. Use soap and water, or an alcohol-based hand rub.\n2.   Maintain a safe distance from anyone who is coughing or sneezing.\n3.   Don’t touch your eyes, nose or mouth.\n4.   Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze."
+            android:text="1.   Clean your hands often. Use soap and water, or an alcohol-based hand rub.\n2.   Maintain a safe distance from anyone who is coughing or sneezing.\n3.   Don’t touch your eyes, nose or mouth.\n4.   Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.\n5.   Stay home if you feel unwell.If you have a fever, a cough and difficulty breathing, seek medical attention. Call in advance.\n6.   Follow the directions of your local health authority.\n7.   Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others."
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="textStart"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/aboutContent4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutContent3b"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="For informational purposes only. Consult your local medical authority for advice."
             android:textColor="@color/colorPrimaryDark"
             android:textSize="17sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/aboutContent4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Source: "
+                android:fontFamily="@font/montserrat"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/whoBtn"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/source"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="World Health Organization"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+        <TextView
+            android:id="@+id/case_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Case No.: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/case_no"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Date: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_age"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_date"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Age: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_date"
+            android:layout_toEndOf="@+id/case_age"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Gender: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_nationality"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_gender"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Nationality: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_location"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Hospital Admitted To: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_travel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_gender"
+            android:layout_toEndOf="@+id/case_nationality"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Has Travel History: TBD"
+            android:textSize="15sp"/>
+        <RelativeLayout
+            android:id="@+id/case_statusBox"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimaryDark">
+        <TextView
+            android:id="@+id/case_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Status: TBD"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/case_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_resident"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Location: TBD"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/case_resident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_nationality"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Resident of: TBD"
+            android:textSize="15sp"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
