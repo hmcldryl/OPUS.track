@@ -10,27 +10,15 @@
             android:title="About COVID-19" />
         <item
             android:id="@+id/nav_overview"
-            android:icon="@drawable/ic_opustrack"
+            android:icon="@drawable/ic_overview"
             android:title="Overview" />
         <item
-            android:id="@+id/nav_timeline"
-            android:icon="@drawable/ic_timeline"
-            android:title="Timeline" />
-        <item
-            android:id="@+id/nav_philippines"
-            android:icon="@drawable/ic_philippines"
-            android:title="Philippines Stats" />
-        <item
-            android:id="@+id/nav_global"
-            android:icon="@drawable/ic_globe"
-            android:title="Global Stats" />
-        <item
             android:id="@+id/nav_links"
-            android:icon="@drawable/ic_opustrack"
+            android:icon="@drawable/ic_link"
             android:title="Useful Links" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/ic_opustrack"
+            android:icon="@drawable/ic_about"
             android:title="About Us" />
     </group>
 </menu>

@@ -18,8 +18,14 @@
         tools:layout="@layout/fragment_overview"/>
 
     <fragment
-        android:id="@+id/nav_timeline"
-        android:name="com.tracker.projectopus.ui.timeline.TimelineFragment"
+        android:id="@+id/nav_links"
+        android:name="com.tracker.projectopus.ui.links.LinksFragment"
         android:label="Timeline"
-        tools:layout="@layout/fragment_timeline" />
+        tools:layout="@layout/fragment_links" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.tracker.projectopus.ui.about.AboutFragment"
+        android:label="Timeline"
+        tools:layout="@layout/fragment_links" />
 </navigation>

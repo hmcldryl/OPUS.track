@@ -59,9 +59,8 @@
                             android:id="@+id/updatedAsOf"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/today"
                             android:layout_marginStart="5dp"
-                            android:layout_toEndOf="@+id/today_population"
+                            android:layout_toEndOf="@+id/today"
                             android:fontFamily="@font/montserrat"
                             android:text="(EEE, MMMM dd)"
                             android:textAlignment="textStart"
@@ -349,12 +348,14 @@
                     </RelativeLayout>
                 </RelativeLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_below="@id/latestToday2"
                 android:background="@color/colorPrimaryDark"
-                android:layout_below="@id/latestToday2">
+                android:padding="10dp">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/timelinePh"
                     android:layout_width="match_parent"
