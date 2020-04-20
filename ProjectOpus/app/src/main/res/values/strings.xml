@@ -3,4 +3,18 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--WHO and DOH links-->
+    <string name="link_who">
+        <a href= "https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>
+    </string>
+    <string name="link_doh">
+        <a href= "https://www.doh.gov.ph/">https://www.doh.gov.ph/</a>
+    </string>
+
+    <!--local hotlines-->
+    <string name="palawan_hotline1"><b>City Police Station:</b> 166 / (048) 434 – 9890 / 434 – 9889\n<b>Provincial Police Station:</b> (048) 434 – 7053\n<b>Police Maritime:</b> (048) 433 – 3262 \n<b>Fire Department:</b> 160 / (048) 434 – 2076\n<b>Kilos Agad Action Center:</b> 117\n<b>Patrol 117:</b> (048) 433 – 5322\n<b>KAAC/Kilos Agad Action Center:</b> (048) 434 – 9426\n<b>Western Command:</b> (048) – 433 – 2311 / (048) – 433 – 2411\n<b>570th CTW :</b> (048) 433 – 3991 / 433 – 8225\n<b>NAVFORWEST :</b> (048) – 434 – 8295</string>
+    <string name="hotline_hospital"><b>Provincial Hospital:</b> 169 / (048) – 433 – 2621\n<b>Provincial Health Office:</b> (048) – 433 – 2721\n<b>Palawan Adventist Hospital:</b> (048) – 433 – 2156\n<b>City Health Office:</b> (048) – 434 – 6582\n<b>Cooperative Hospital:</b> (048) – 434–3255 / 434–5580</string>
+    <string name="hotline_rc"><b>PNRC:</b> (048) 433 – 6362\n<b>Office of the City Mayor:</b> (048) 717–8000\n<b>Department of Interior and Local Government (DILG):</b>\n0927–422–6300 / 0915–005–4535 – <b>GLOBE</b>\n0961–772–1668 / 0961–384–9272 – <b>SMART</b>\n(02) 8763454 / LOCAL 8801–8815 – <b>TRUNKLINE</b></string>
+    <string name="hotline_brgy">0906–345–4046 – <b>BACUNGAN</b>\n0916–105–5010 – <b>BAGONG PAG-ASA</b>\n0945–692–4569 – <b>BAGONG SIKAT</b>\n0920–423–1859 – <b>BAONG SILANG</b>\n0909–873–8127 – <b>BAHILE</b>\n0912–169–5689 / 0975–780–3479 – <b>BANCAO-BANCAO</b>\n0905–712–6404 – <b>BUENAVISTA</b>\n0975–728–5435 – <b>CABAYUGAN</b>\n0935–341–7856 / 0975–855–7273 – <b>INAGAWAN</b>\n0965–953–7209 – <b>IRAWAN</b>\n0908–452–1366 – <b>KALIPAY</b>\n0936–101–8574 / 0977–042–4073 – <b>KAMUNING</b>\n0910–497–3815 – <b>LIWANAG</b>\n0917–702–9155 / 0997–941–7710 – <b>LUZVIMINDA</b>\n0926–852–5746 – <b>MACARASCAS</b>\n0950–491–8917 – <b>MALIGAYA</b>\n0929–886–4627 – <b>MANDARAGAT</b>\n433–2188 – <b>MANGGAHAN</b>\n434–0608 – <b>MANINGNING</b>\n0943–132–2642 – <b>MASIPAG</b>\n0977–711–1115 – <b>MATAHIMIK</b>\n0955–316–503 – <b>MATIYAGA</b>\n0915–848–2822 – <b>MALIGROSA</b>\n0975–940–1269 – <b>MODEL</b>\n0997–977–5379 – <b>MONTIBLE</b>\n0939–949–9347 / 0955–855–3435 – <b>PAGKAKAISA</b>\n0909–335–2624 – <b>SALVACION</b>\n0928–475–2549 / 0975–202–3872 – <b>SAN JOSE</b>\n0967–887–0121 – <b>SAN MANUEL</b>\n0967–350–5811 / 0975–202–3872 – <b>SAN MIGUEL</b>\n0912–290–0607 – <b>SAN PEDRO</b>\n0955–702–6123 – <b>SEASIDE (SAN ISIDRO)</b>\n0949–164–4111 / 0965–248–5396 – <b>SICSICAN</b>\n0920–325–1368 – <b>STA. LOURDES</b>\n0967–543–9820 – <b>STA. LUCIA</b>\n0919–541–2671 – <b>STA. MONICA</b>\n0936–116–0013 – <b>TAGABINET</b>\n0907–646–5832 / 0912–575–1121 – <b>TAGBUROS</b>\n434–0537 – <b>TAGUMPAY</b>\n0999–537–4052 - <b>TINIGUIBAN</b></string>
 </resources>
