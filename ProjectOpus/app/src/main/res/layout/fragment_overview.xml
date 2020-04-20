@@ -245,6 +245,12 @@
                         android:layout_height="300dp"
                         android:layout_below="@+id/casesHeader"
                         android:layout_marginBottom="5dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/timelinePh"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@id/caseListPh"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -356,10 +362,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:padding="10dp">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/timelinePh"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp" />
+
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

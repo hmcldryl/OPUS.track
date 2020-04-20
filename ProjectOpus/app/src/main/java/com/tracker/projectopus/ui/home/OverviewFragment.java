@@ -23,6 +23,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.tracker.projectopus.ChartAdapter;
+import com.tracker.projectopus.DatabaseHelper;
 import com.tracker.projectopus.R;
 import com.tracker.projectopus.TimelineAdapter;
 import com.tracker.projectopus.TrackerChart;
@@ -52,6 +53,7 @@ public class OverviewFragment extends Fragment {
             phPopulation, todayRecoveredText, todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
             globalConfirmedtv, globalRecoveredtv, globalDeathstv;
     private OverviewViewModel overviewViewModel;
+    DatabaseHelper phCaseDataDb;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class OverviewFragment extends Fragment {
                 ViewModelProviders.of(this).get(OverviewViewModel.class);
         View root = inflater.inflate(R.layout.fragment_overview, container, false);
 
+        phCaseDataDb = new DatabaseHelper(getContext());
         updatedAt = root.findViewById(R.id.updatedAsOf);
         phPopulation = root.findViewById(R.id.today_population);
         text0 = root.findViewById(R.id.dataDeaths);
@@ -172,6 +175,9 @@ public class OverviewFragment extends Fragment {
     }
 
     public void phTimeline() {
+        phCaseDataDb = new DatabaseHelper(getContext());
+        timelineArrayList = new ArrayList<>();
+        final TimelineAdapter timelineAdapter = new TimelineAdapter(getActivity(), timelineArrayList);
         Date current = Calendar.getInstance().getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String currentDate = simpleDateFormat.format(current);
@@ -181,6 +187,7 @@ public class OverviewFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+                            JSONObject phDataCount = response.getJSONObject("count");
                             JSONArray phData = response.getJSONArray("result");
                             if (phData.length() > 0) {
                                 for (int i = 0; i < phData.length(); i++) {
@@ -191,9 +198,9 @@ public class OverviewFragment extends Fragment {
                                     int confirmed = data.getInt("confirmed");
                                     int deaths = data.getInt("deaths");
 
-                                    timelineArrayList.add(new TrackerTimeline(date, recovered, confirmed, deaths));
+                                    phCaseDataDb.insertData(date, recovered, confirmed, deaths);
+                                    //timelineArrayList.add(new TrackerTimeline(date, recovered, confirmed, deaths));
                                 }
-                                TimelineAdapter timelineAdapter = new TimelineAdapter(getActivity(), timelineArrayList);
                                 recyclerView2.setAdapter(timelineAdapter);
                             }
                         } catch (JSONException e) {
@@ -286,6 +293,8 @@ public class OverviewFragment extends Fragment {
     }
 
     public void getPhTimelineData(JSONArray jsonArray) throws JSONException {
+        casesArrayList = new ArrayList<>();
+        ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
         if (jsonArray.length() > 0) {
             /*for (int i = 0; i < jsonArray.length(); i++) {
 
@@ -321,7 +330,6 @@ public class OverviewFragment extends Fragment {
 
                 casesArrayList.add(new TrackerChart(phCaseNo, phDate, phAge, phGender, phNationality, phHospital, phTravelHistory, phStatus, phLat, phLong, phResident));
             }
-            ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
             recyclerView1.setAdapter(chartAdapter);
         }
     }
