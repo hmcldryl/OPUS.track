@@ -57,9 +57,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-
-    public Cursor getAllData() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        return db.rawQuery(getTableData, null);
-    }
 }
