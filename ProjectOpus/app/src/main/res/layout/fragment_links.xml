@@ -289,7 +289,7 @@
             android:text="02-894-26843\n0915-698-1433"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline2"
@@ -313,7 +313,7 @@
             android:text="1555"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline4"
@@ -337,7 +337,7 @@
             android:text="For all your energy consumer-related concerns during the Enhanced Community Quarantine period (15 March to 14 April 2020), you may get in touch with us at our TEMPORARY HOTLINE and MOBILE NUMBERS:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline6"
@@ -349,7 +349,7 @@
             android:text="\n(02) 8285-6349\n+63927-981-7825\n+63945-208-5290\nEmail us at: cwpo@doe.gov.ph"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline7"
@@ -373,7 +373,7 @@
             android:text="911"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline9"
@@ -397,7 +397,7 @@
             android:text="\nRegion IV-B:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline11"
@@ -409,7 +409,7 @@
             android:text="(043) 723-4248\n(043) 702-9361"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline12"
@@ -421,7 +421,7 @@
             android:text="\nRegion I:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline13"
@@ -433,7 +433,7 @@
             android:text="(072) 607-6528\n(072) 700-4747"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline14"
@@ -445,7 +445,7 @@
             android:text="\nRegion II:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline15"
@@ -457,7 +457,7 @@
             android:text="(078) 304-1630\n(078) 304-1631"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline16"
@@ -469,7 +469,7 @@
             android:text="\nRegion III:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline17"
@@ -481,7 +481,7 @@
             android:text="(045) 455-1526\n(045) 455-0033"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline18"
@@ -493,7 +493,7 @@
             android:text="\nRegion IV-A:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline19"
@@ -505,7 +505,7 @@
             android:text="(049) 834-4344\n(049) 531-7266\nTF (049) 531-7279"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline20"
@@ -517,7 +517,7 @@
             android:text="\nRegion V:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline21"
@@ -529,7 +529,7 @@
             android:text="(052) 742-1176\n+63917-574-7880 (Globe)\n+63928-505-3861 (Smart)"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline22"
@@ -541,7 +541,7 @@
             android:text="\nRegion VI:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline23"
@@ -553,7 +553,7 @@
             android:text="(033) 336-9353\n(033) 337-6671\n(033) 509-7319"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline24"
@@ -565,7 +565,7 @@
             android:text="\nRegion VII:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline25"
@@ -577,7 +577,7 @@
             android:text="(032) 416-5025\n(032) 253-6162\n(032) 253-8730\n+63917-947-5666 (Globe)\n+63949-471-0009 (Smart)"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline26"
@@ -589,7 +589,7 @@
             android:text="\nDepartment of Social Welfare and Development Hotline:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline27"
@@ -601,7 +601,7 @@
             android:text="(02) 8931-8101 to 07"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline28"
@@ -613,7 +613,7 @@
             android:text="\nPhilippine National Police (PNP) Hotline:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline29"
@@ -625,7 +625,7 @@
             android:text="(02) 8723-0401 to 20"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline30"
@@ -637,7 +637,7 @@
             android:text="\nNATIONAL CENTER FOR MENTAL HEALTH (NCMH)\nCrisis Hotline:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline31"
@@ -649,7 +649,7 @@
             android:text="Trunk line:\n0917-899-USAP (8727)\n989-USAP (8727)\n(02) 8531-9001 to 10 local 201"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline32"
@@ -661,7 +661,7 @@
             android:text="\nPALAWAN Hotlines"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotline33"
@@ -673,7 +673,7 @@
             android:text="@string/palawan_hotline1"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinehos"
@@ -685,7 +685,7 @@
             android:text="\nHospital"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinehos1"
@@ -697,7 +697,7 @@
             android:text="@string/hotline_hospital"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlineredcross"
@@ -709,7 +709,7 @@
             android:text="\nPhilippine National Red Cross"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlineredcross1"
@@ -721,7 +721,7 @@
             android:text="@string/hotline_rc"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinepalnews"
@@ -733,7 +733,7 @@
             android:text="\nPalawan News Hotline Numbers:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinepalnews1"
@@ -745,7 +745,7 @@
             android:text="0905-829-6646\n(048) 716-4248"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinebrgy"
@@ -757,7 +757,7 @@
             android:text="\nBarangay Hotlines:"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="15sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/hotlinebrgy1"
@@ -769,7 +769,7 @@
             android:text="@string/hotline_brgy"
             android:textAlignment="textStart"
             android:textColor="@color/colorPrimaryDark"
-            android:textsize="13sp" />
+            android:textSize="13sp" />
         <TextView
             android:id="@+id/aboutContent4"
             android:layout_width="match_parent"

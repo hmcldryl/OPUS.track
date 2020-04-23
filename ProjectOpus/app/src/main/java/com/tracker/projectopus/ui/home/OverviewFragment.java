@@ -1,5 +1,8 @@
 package com.tracker.projectopus.ui.home;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +25,7 @@ import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.tracker.projectopus.CaseAdapter;
 import com.tracker.projectopus.ChartAdapter;
 import com.tracker.projectopus.DatabaseHelper;
 import com.tracker.projectopus.R;
@@ -53,7 +57,8 @@ public class OverviewFragment extends Fragment {
             phPopulation, todayRecoveredText, todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
             globalConfirmedtv, globalRecoveredtv, globalDeathstv;
     private OverviewViewModel overviewViewModel;
-    DatabaseHelper phCaseDataDb;
+    private DatabaseHelper phCaseDataDb;
+    private CaseAdapter caseAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -61,7 +66,7 @@ public class OverviewFragment extends Fragment {
                 ViewModelProviders.of(this).get(OverviewViewModel.class);
         View root = inflater.inflate(R.layout.fragment_overview, container, false);
 
-        phCaseDataDb = new DatabaseHelper(getContext());
+        phCaseDataDb = new DatabaseHelper(this.getActivity());
         updatedAt = root.findViewById(R.id.updatedAsOf);
         phPopulation = root.findViewById(R.id.today_population);
         text0 = root.findViewById(R.id.dataDeaths);
@@ -80,29 +85,31 @@ public class OverviewFragment extends Fragment {
         globalDeathstv = root.findViewById(R.id.today_deathsGlobal);
         updatedAtGlobal = root.findViewById(R.id.updatedAsOf1);
 
-        recyclerView1 = root.findViewById(R.id.caseListPh);
+        /*recyclerView1 = root.findViewById(R.id.caseListPh);
         recyclerView1.setHasFixedSize(true);
-        recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         recyclerView2 = root.findViewById(R.id.timelinePh);
         recyclerView2.setHasFixedSize(true);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView2.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        caseAdapter = new CaseAdapter(getContext(), getAllItems());
+        recyclerView2.setAdapter(caseAdapter);
 
         timelineArrayList = new ArrayList<>();
-        casesArrayList = new ArrayList<>();
+        casesArrayList = new ArrayList<>();*/
 
-        requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue = Volley.newRequestQueue(this.getActivity());
 
-        phTimeline();
-        phToday1();
-        phToday2();
-        parseJSONPh();
-        parseJSONGlobal();
+        getCasesPH();
+        getTodayPH_2();
+        getTodayPH_1();
+        getDataPH();
+        getDataGlobal();
 
         return root;
     }
 
-    public void phToday2() {
+    public void getTodayPH_1() {
         String url = "https://covidapi.info/api/v1/country/PHL/latest";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -138,7 +145,7 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void phToday1() {
+    public void getTodayPH_2() {
         String url = "https://corona-api.com/countries/PH?include=timeline";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -174,10 +181,8 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void phTimeline() {
-        phCaseDataDb = new DatabaseHelper(getContext());
-        timelineArrayList = new ArrayList<>();
-        final TimelineAdapter timelineAdapter = new TimelineAdapter(getActivity(), timelineArrayList);
+    public void getCasesPH() {
+        phCaseDataDb = new DatabaseHelper(this.getActivity());
         Date current = Calendar.getInstance().getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String currentDate = simpleDateFormat.format(current);
@@ -199,9 +204,7 @@ public class OverviewFragment extends Fragment {
                                     int deaths = data.getInt("deaths");
 
                                     phCaseDataDb.insertData(date, recovered, confirmed, deaths);
-                                    //timelineArrayList.add(new TrackerTimeline(date, recovered, confirmed, deaths));
                                 }
-                                recyclerView2.setAdapter(timelineAdapter);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -216,7 +219,7 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void parseJSONGlobal() {
+    public void getDataGlobal() {
         String url = "https://covidapi.info/api/v1/global";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -250,35 +253,33 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void parseJSONPh() {
+    public void getDataPH() {
         String url = "https://coronavirus-ph-api.herokuapp.com/cases";
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         try {
-                            getPhTimelineData(response);
-                            /*if (response.length() > 0) {
+                            casesArrayList = new ArrayList<>();
+                            ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
+                            if (response.length() > 0) {
                                 for (int i = 0; i < response.length(); i++) {
-                                    JSONObject phData = response.getJSONObject(i);
-
-                                    String phCaseNo = phData.isNull("case_no") ? "" : phData.optString("case_no");
-                                    String phDate = phData.isNull("date") ? "" : phData.optString("date");
-                                    String phAge = phData.isNull("age") ? "" : phData.optString("age");
-                                    String phGender = phData.isNull("gender") ? "" : phData.optString("gender");
-                                    String phNationality = phData.isNull("nationality") ? "" : phData.optString("nationality");
-                                    String phHospital = phData.isNull("hospital_admitted_to") ? "" : phData.optString("hospital_admitted_to");
-                                    String phTravelHistory = phData.isNull("travel_history") ? "" : phData.optString("travel_history");
-                                    String phStatus = phData.isNull("status") ? "" : phData.optString("status");
-                                    String phLat = phData.isNull("latitude") ? "" : phData.optString("latitude");
-                                    String phLong = phData.isNull("longitude") ? "" : phData.optString("longitude");
-                                    String phResident = phData.isNull("resident_of") ? "" : phData.optString("resident_of");
+                                    String phCaseNo = response.getJSONObject(i).getString("case_no");
+                                    String phDate = response.getJSONObject(i).getString("date");
+                                    String phAge = response.getJSONObject(i).getString("age");
+                                    String phGender = response.getJSONObject(i).getString("gender");
+                                    String phNationality = response.getJSONObject(i).getString("nationality");
+                                    String phHospital = response.getJSONObject(i).getString("hospital_admitted_to");
+                                    String phTravelHistory = response.getJSONObject(i).getString("travel_history");
+                                    String phStatus = response.getJSONObject(i).getString("status");
+                                    String phLat = response.getJSONObject(i).getString("latitude");
+                                    String phLong = response.getJSONObject(i).getString("longitude");
+                                    String phResident = response.getJSONObject(i).getString("resident_of");
 
                                     casesArrayList.add(new TrackerChart(phCaseNo, phDate, phAge, phGender, phNationality, phHospital, phTravelHistory, phStatus, phLat, phLong, phResident));
                                 }
-                                ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
                                 recyclerView1.setAdapter(chartAdapter);
-                            }*/
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -290,48 +291,6 @@ public class OverviewFragment extends Fragment {
             }
         });
         requestQueue.add(request);
-    }
-
-    public void getPhTimelineData(JSONArray jsonArray) throws JSONException {
-        casesArrayList = new ArrayList<>();
-        ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
-        if (jsonArray.length() > 0) {
-            /*for (int i = 0; i < jsonArray.length(); i++) {
-
-                JSONObject data = jsonArray.getJSONObject(i);
-
-                String phCaseNo = data.isNull("case_no") ? "" : data.optString("case_no");
-                String phDate = data.isNull("date") ? "" : data.optString("date");
-                String phAge = data.isNull("age") ? "" : data.optString("age");
-                String phGender = data.isNull("gender") ? "" : data.optString("gender");
-                String phNationality = data.isNull("nationality") ? "" : data.optString("nationality");
-                String phHospital = data.isNull("hospital_admitted_to") ? "" : data.optString("hospital_admitted_to");
-                String phTravelHistory = data.isNull("travel_history") ? "" : data.optString("travel_history");
-                String phStatus = data.isNull("status") ? "" : data.optString("status");
-                String phLat = data.isNull("latitude") ? "" : data.optString("latitude");
-                String phLong = data.isNull("longitude") ? "" : data.optString("longitude");
-                String phResident = data.isNull("resident_of") ? "" : data.optString("resident_of");
-
-                casesArrayList.add(new TrackerChart(phCaseNo, phDate, phAge, phGender, phNationality, phHospital, phTravelHistory, phStatus, phLat, phLong, phResident));
-            }*/
-            for (int i = 0; i < jsonArray.length(); i++) {
-
-                String phCaseNo = jsonArray.getJSONObject(i).getString("case_no");
-                String phDate = jsonArray.getJSONObject(i).getString("date");
-                String phAge = jsonArray.getJSONObject(i).getString("age");
-                String phGender = jsonArray.getJSONObject(i).getString("gender");
-                String phNationality = jsonArray.getJSONObject(i).getString("nationality");
-                String phHospital = jsonArray.getJSONObject(i).getString("hospital_admitted_to");
-                String phTravelHistory = jsonArray.getJSONObject(i).getString("travel_history");
-                String phStatus = jsonArray.getJSONObject(i).getString("status");
-                String phLat = jsonArray.getJSONObject(i).getString("latitude");
-                String phLong = jsonArray.getJSONObject(i).getString("longitude");
-                String phResident = jsonArray.getJSONObject(i).getString("resident_of");
-
-                casesArrayList.add(new TrackerChart(phCaseNo, phDate, phAge, phGender, phNationality, phHospital, phTravelHistory, phStatus, phLat, phLong, phResident));
-            }
-            recyclerView1.setAdapter(chartAdapter);
-        }
     }
 
     public void getCalculatedData(JSONObject jsonObject) throws JSONException {
@@ -418,4 +377,14 @@ public class OverviewFragment extends Fragment {
         return "(" + str + ")";
     }
 
+    public Cursor getAllItems() {
+        SQLiteDatabase db = phCaseDataDb.getWritableDatabase();
+        return db.query(DatabaseHelper.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                DatabaseHelper.COL_2 + " DESC");
+    }
 }

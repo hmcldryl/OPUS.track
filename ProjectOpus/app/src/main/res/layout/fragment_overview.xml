@@ -214,7 +214,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:id="@+id/latestToday1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -252,15 +252,14 @@
                         android:layout_height="300dp"
                         android:layout_below="@id/caseListPh"/>
                 </RelativeLayout>
-            </LinearLayout>
+            </LinearLayout>-->
 
             <LinearLayout
                 android:id="@+id/latestToday2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/latestToday1"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:layout_below="@+id/latestToday"
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -358,6 +357,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_below="@id/latestToday2"
                 android:background="@color/colorPrimaryDark"
                 android:padding="10dp">
