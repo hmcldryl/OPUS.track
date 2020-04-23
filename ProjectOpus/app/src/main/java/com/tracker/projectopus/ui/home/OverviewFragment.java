@@ -85,7 +85,7 @@ public class OverviewFragment extends Fragment {
         globalDeathstv = root.findViewById(R.id.today_deathsGlobal);
         updatedAtGlobal = root.findViewById(R.id.updatedAsOf1);
 
-        recyclerView1 = root.findViewById(R.id.caseListPh);
+        /*recyclerView1 = root.findViewById(R.id.caseListPh);
         recyclerView1.setHasFixedSize(true);
         recyclerView1.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
@@ -96,7 +96,7 @@ public class OverviewFragment extends Fragment {
         recyclerView2.setAdapter(caseAdapter);
 
         timelineArrayList = new ArrayList<>();
-        casesArrayList = new ArrayList<>();
+        casesArrayList = new ArrayList<>();*/
 
         requestQueue = Volley.newRequestQueue(this.getActivity());
 
