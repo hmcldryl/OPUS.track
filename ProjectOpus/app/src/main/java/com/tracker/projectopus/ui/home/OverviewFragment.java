@@ -85,19 +85,6 @@ public class OverviewFragment extends Fragment {
         globalDeathstv = root.findViewById(R.id.today_deathsGlobal);
         updatedAtGlobal = root.findViewById(R.id.updatedAsOf1);
 
-        /*recyclerView1 = root.findViewById(R.id.caseListPh);
-        recyclerView1.setHasFixedSize(true);
-        recyclerView1.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-
-        recyclerView2 = root.findViewById(R.id.timelinePh);
-        recyclerView2.setHasFixedSize(true);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        caseAdapter = new CaseAdapter(getContext(), getAllItems());
-        recyclerView2.setAdapter(caseAdapter);
-
-        timelineArrayList = new ArrayList<>();
-        casesArrayList = new ArrayList<>();*/
-
         requestQueue = Volley.newRequestQueue(this.getActivity());
 
         getCasesPH();
