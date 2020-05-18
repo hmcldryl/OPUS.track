@@ -10,805 +10,489 @@
     android:scrollbarAlwaysDrawVerticalTrack="true"
     tools:context=".ui.links.LinksFragment">
 
-    <RelativeLayout
-        android:id="@+id/covidInfo"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LINKS AND HOTLINES"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="30sp"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/whoCardBtn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:padding="3dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/who_logo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="World Health Organization"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:padding="3dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/doh_logo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Department of Health"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
 
         <LinearLayout
-            android:id="@+id/aboutTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp">
-
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/aboutTitle1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="WHAT IS"
-                android:textAlignment="center"
+                android:text="NATIONAL HOTLINES"
+                android:textAlignment="textStart"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="45sp" />
+                android:textSize="25sp"/>
 
             <TextView
-                android:id="@+id/aboutTitle1b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
                 android:fontFamily="@font/montserrat_bold"
-                android:text=" COVID-19 "
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="50sp" />
+                android:text="DOH COVID-19 Emergency Hotlines:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="02-894-26843\n0915-698-1433"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="For PLDT, Smart, Sun, and TNT subscribers:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="1555"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Department of Energy"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="For all your energy consumer-related concerns during the Enhanced Community Quarantine period (15 March to 14 April 2020), you may get in touch with us at our TEMPORARY HOTLINE and MOBILE NUMBERS:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(02) 8285-6349\n+63927-981-7825\n+63945-208-5290\nEmail us at: cwpo@doe.gov.ph"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="National Emergency Hotline"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="911"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Office of the Civil Defense Regional Office Telephone Directory"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region IV-B:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(043) 723-4248\n(043) 702-9361"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region I:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(072) 607-6528\n(072) 700-4747"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region II:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(078) 304-1630\n(078) 304-1631"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region III:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(045) 455-1526\n(045) 455-0033"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region IV-A:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(049) 834-4344\n(049) 531-7266\nTF (049) 531-7279"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region V:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(052) 742-1176\n+63917-574-7880 (Globe)\n+63928-505-3861 (Smart)"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region VI:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(033) 336-9353\n(033) 337-6671\n(033) 509-7319"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Region VII:"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(032) 416-5025\n(032) 253-6162\n(032) 253-8730\n+63917-947-5666 (Globe)\n+63949-471-0009 (Smart)"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Department of Social Welfare and Development"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(02) 8931-8101 to 07"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Philippine National Police (PNP)"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="(02) 8723-0401 to 20"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="National Center for Mental Health (NCMH)\nCrisis Hotline"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Trunk line:\n0917-899-USAP (8727)\n989-USAP (8727)\n(02) 8531-9001 to 10 local 201"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="PALAWAN HOTLINES"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/palawan_hotline1"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Hospital"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/hotline_hospital"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Philippine National Red Cross"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/hotline_rc"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Palawan News"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0905-829-6646\n(048) 716-4248"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Barangay Hotlines"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/hotline_brgy"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:paddingBottom="20dp"/>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/aboutContent1a"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutTitle"
-            android:fontFamily="@font/montserrat"
-            android:text="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/aboutContent1b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutContent1a"
-            android:fontFamily="@font/montserrat"
-            android:text="Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutTitle2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutContent1b"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="HOW IT SPREADS"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/aboutContent2a"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutTitle2"
-            android:fontFamily="@font/montserrat"
-            android:text="The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutContent2b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutContent2a"
-            android:fontFamily="@font/montserrat"
-            android:text="You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutTitle3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContent2b"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="PREVENTION"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/aboutContent3a"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutTitle3"
-            android:fontFamily="@font/montserrat"
-            android:text="Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local public health agency."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutContent3b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContent3a"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="1.   Clean your hands often. Use soap and water, or an alcohol-based hand rub.\n2.   Maintain a safe distance from anyone who is coughing or sneezing.\n3.   Don’t touch your eyes, nose or mouth.\n4.   Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.\n5.   Stay home if you feel unwell.If you have a fever, a cough and difficulty breathing, seek medical attention. Call in advance.\n6.   Follow the directions of your local health authority.\n7.   Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutTitlehow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContent3b"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="HOW LIKELY AM I TO CATCH COVID-19?"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/aboutContenthow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutTitlehow"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="The risk depends on where you are - and more specifically, whether there is a COVID-19 outbreak unfolding there."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutContenthow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContenthow"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text=" -   For most people in most locations the risk of catching COVID-19 is still low.\n -   However, there are now places around the world (cities or areas) where the disease is spreading.\n -   For people living in, or visiting, these areas the risk of catching COVID-19 is higher.\nGovernments and health authorities are taking vigorous action every time a new case of COVID-19 is identified."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutContent3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContenthow2"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text=" -   COVID-19 outbreaks can be contained and transmission stopped, as has been shown in China and some other countries.\n\nUnfortunately, new outbreaks can emerge rapidly. It’s important to be aware of the situation where you are or intend to go.\nWHO publishes daily updates on the COVID-19 situation worldwide.\n\nBe sure to comply with any local restrictions on travel, movement or large gatherings.\nCooperating with disease control efforts will reduce your risk of catching or spreading COVID-19."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp"
-            />
-
-        <TextView
-            android:id="@+id/aboutTitle4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContent3"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="WORLD HEALTH ORGANIZATION"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/aboutWHOLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutTitle4"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/link_who"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            />
-
-        <TextView
-            android:id="@+id/aboutContentWHO"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutWHOLink"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="World Health Organization (WHO) has updated operational planning guidelines in balancing the demands of responding directly to COVID-19 while maintaining essential health service delivery, and mitigating the risk of system collapse. \nThis includes a set of targeted immediate actions that countries should consider at national, regional, and local level to reorganize and maintain access to high-quality essential health services for all."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutTitleDOH"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContentWHO"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="DEPARTMENT OF HEALTH"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/aboutDOHLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutTitleDOH"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/link_doh"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            />
-
-        <TextView
-            android:id="@+id/aboutContentDOH"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutDOHLink"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="The Department of Health (DOH) holds the over-all technical authority on health as it is a national health policy-maker and regulatory institution. \n\nBasically, the DOH has three major roles in the health sector: \n   1.    Leadership in health; \n   2.   Enabler and capacity builder; and \n   3.   Administrator of specific services. \n\nIts mandate is to develop national plans, technical standards, and guidelines on health. Aside from being the regulator of all health services and products, the DOH is the provider of special tertiary health care services and technical assistance to health providers and stakeholders."
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/aboutTitleHotlines"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutContentDOH"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="NATIONAL HOTLINES:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/aboutHotlines"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutTitleHotlines"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="DOH COVID-19 emergency hotlines:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutHotlines"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="02-894-26843\n0915-698-1433"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline1"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nFor PLDT, Smart, Sun, and TNT subscribers:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline2"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="1555"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline3"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nEnergy Services 24/7:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline4"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="For all your energy consumer-related concerns during the Enhanced Community Quarantine period (15 March to 14 April 2020), you may get in touch with us at our TEMPORARY HOTLINE and MOBILE NUMBERS:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline5"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="\n(02) 8285-6349\n+63927-981-7825\n+63945-208-5290\nEmail us at: cwpo@doe.gov.ph"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline6"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nNational Emergency Hotline"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline7"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="911"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline8"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nOffice of the Civil Defense Regional Office Telephone Directory"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline9"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion IV-B:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline10"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(043) 723-4248\n(043) 702-9361"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline11"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion I:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline12"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(072) 607-6528\n(072) 700-4747"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline13"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion II:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline14"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(078) 304-1630\n(078) 304-1631"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline15"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion III:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline16"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(045) 455-1526\n(045) 455-0033"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline17"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion IV-A:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline18"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(049) 834-4344\n(049) 531-7266\nTF (049) 531-7279"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline19"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion V:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline20"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(052) 742-1176\n+63917-574-7880 (Globe)\n+63928-505-3861 (Smart)"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline21"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion VI:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline22"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(033) 336-9353\n(033) 337-6671\n(033) 509-7319"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline23"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nRegion VII:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline25"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline24"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(032) 416-5025\n(032) 253-6162\n(032) 253-8730\n+63917-947-5666 (Globe)\n+63949-471-0009 (Smart)"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline26"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline25"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nDepartment of Social Welfare and Development Hotline:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline27"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline26"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(02) 8931-8101 to 07"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline28"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline27"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nPhilippine National Police (PNP) Hotline:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline29"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline28"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="(02) 8723-0401 to 20"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline30"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline29"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nNATIONAL CENTER FOR MENTAL HEALTH (NCMH)\nCrisis Hotline:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline31"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline30"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="Trunk line:\n0917-899-USAP (8727)\n989-USAP (8727)\n(02) 8531-9001 to 10 local 201"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline32"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline31"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nPALAWAN Hotlines"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotline33"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline32"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="@string/palawan_hotline1"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinehos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotline33"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nHospital"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinehos1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinehos"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="@string/hotline_hospital"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlineredcross"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinehos1"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nPhilippine National Red Cross"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlineredcross1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlineredcross"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="@string/hotline_rc"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinepalnews"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlineredcross1"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nPalawan News Hotline Numbers:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinepalnews1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinepalnews"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="0905-829-6646\n(048) 716-4248"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinebrgy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinepalnews1"
-            android:fontFamily="@font/montserrat_bold"
-            android:paddingStart="20dp"
-            android:text="\nBarangay Hotlines:"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/hotlinebrgy1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinebrgy"
-            android:fontFamily="@font/montserrat"
-            android:paddingStart="20dp"
-            android:text="@string/hotline_brgy"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="13sp" />
-        <TextView
-            android:id="@+id/aboutContent4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hotlinebrgy1"
-            android:layout_marginTop="5dp"
-            android:padding="10dp"
-            android:fontFamily="@font/montserrat"
-            android:text="For informational purposes only. Consult your local medical authority for advice."
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17sp" />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@id/aboutContent4"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/source"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Source: "
-                android:fontFamily="@font/montserrat"
-                android:textSize="15sp"/>
-
-            <Button
-                android:id="@+id/whoBtn"
-                android:layout_width="250dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/source"
-                android:background="@color/colorPrimary"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="WORLD HEALTH ORGANIZATION"
-                android:textSize="10sp"
-                android:textColor="@color/colorPrimaryDark" />
-        </RelativeLayout>
-    </RelativeLayout>
 </ScrollView>

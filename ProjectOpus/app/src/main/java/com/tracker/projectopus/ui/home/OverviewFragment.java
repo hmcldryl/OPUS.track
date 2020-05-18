@@ -25,9 +25,7 @@ import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.tracker.projectopus.CaseAdapter;
 import com.tracker.projectopus.ChartAdapter;
-import com.tracker.projectopus.DatabaseHelper;
 import com.tracker.projectopus.R;
 import com.tracker.projectopus.TimelineAdapter;
 import com.tracker.projectopus.TrackerChart;
@@ -57,8 +55,6 @@ public class OverviewFragment extends Fragment {
             phPopulation, todayRecoveredText, todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
             globalConfirmedtv, globalRecoveredtv, globalDeathstv;
     private OverviewViewModel overviewViewModel;
-    private DatabaseHelper phCaseDataDb;
-    private CaseAdapter caseAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -66,7 +62,6 @@ public class OverviewFragment extends Fragment {
                 ViewModelProviders.of(this).get(OverviewViewModel.class);
         View root = inflater.inflate(R.layout.fragment_overview, container, false);
 
-        phCaseDataDb = new DatabaseHelper(this.getActivity());
         updatedAt = root.findViewById(R.id.updatedAsOf);
         phPopulation = root.findViewById(R.id.today_population);
         text0 = root.findViewById(R.id.dataDeaths);
@@ -87,7 +82,6 @@ public class OverviewFragment extends Fragment {
 
         requestQueue = Volley.newRequestQueue(this.getActivity());
 
-        getCasesPH();
         getTodayPH_2();
         getTodayPH_1();
         getDataPH();
@@ -168,43 +162,6 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void getCasesPH() {
-        phCaseDataDb = new DatabaseHelper(this.getActivity());
-        Date current = Calendar.getInstance().getTime();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String currentDate = simpleDateFormat.format(current);
-        String url = "https://covidapi.info/api/v1/country/PHL/timeseries/2020-01-30/" + currentDate;
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONObject phDataCount = response.getJSONObject("count");
-                            JSONArray phData = response.getJSONArray("result");
-                            if (phData.length() > 0) {
-                                for (int i = 0; i < phData.length(); i++) {
-                                    JSONObject data = phData.getJSONObject(i);
-
-                                    String date = data.getString("date");
-                                    int recovered = data.getInt("recovered");
-                                    int confirmed = data.getInt("confirmed");
-                                    int deaths = data.getInt("deaths");
-
-                                    phCaseDataDb.insertData(date, recovered, confirmed, deaths);
-                                }
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        });
-        requestQueue.add(request);
-    }
 
     public void getDataGlobal() {
         String url = "https://covidapi.info/api/v1/global";
@@ -362,16 +319,5 @@ public class OverviewFragment extends Fragment {
             e.printStackTrace();
         }
         return "(" + str + ")";
-    }
-
-    public Cursor getAllItems() {
-        SQLiteDatabase db = phCaseDataDb.getWritableDatabase();
-        return db.query(DatabaseHelper.TABLE_NAME,
-                null,
-                null,
-                null,
-                null,
-                null,
-                DatabaseHelper.COL_2 + " DESC");
     }
 }

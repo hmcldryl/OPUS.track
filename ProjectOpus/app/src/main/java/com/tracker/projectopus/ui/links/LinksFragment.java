@@ -1,9 +1,12 @@
 package com.tracker.projectopus.ui.links;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -21,8 +24,22 @@ public class LinksFragment extends Fragment {
                 ViewModelProviders.of(this).get(AboutViewModel.class);
         View root = inflater.inflate(R.layout.fragment_links, container, false);
 
+        androidx.cardview.widget.CardView whoCardBtn = root.findViewById(R.id.whoCardBtn);
+
+        whoCardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToWho();
+            }
+        });
 
         return root;
+    }
+
+    private void goToWho () {
+        Uri uriUrl = Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019");
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 
 }
