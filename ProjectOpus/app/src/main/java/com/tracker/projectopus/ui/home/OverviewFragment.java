@@ -53,7 +53,8 @@ public class OverviewFragment extends Fragment {
     private RequestQueue requestQueue;
     private TextView text0, text1, text2, text3, textRecovery, textCpm, textRvd, textDeaths,
             phPopulation, todayRecoveredText, todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
-            globalConfirmedtv, globalRecoveredtv, globalDeathstv;
+            globalConfirmedtv, globalRecoveredtv, globalDeathstv, totalRecoveries, totalDeaths, totalAdmitted,
+            fatalityRate, recoveryRate, totalCases;
     private OverviewViewModel overviewViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -68,13 +69,15 @@ public class OverviewFragment extends Fragment {
         text1 = root.findViewById(R.id.dataConfirmed);
         text2 = root.findViewById(R.id.dataRecovered);
         text3 = root.findViewById(R.id.dataCritical);
-        textRecovery = root.findViewById(R.id.calculatedRecoveryRate);
-        textCpm = root.findViewById(R.id.calculatedCpmRate);
-        textRvd = root.findViewById(R.id.calculatedRvdRate);
-        textDeaths = root.findViewById(R.id.calculatedDeathsRate);
         todayRecoveredText = root.findViewById(R.id.today_recovered);
         todayConfirmedText = root.findViewById(R.id.today_confirmed);
         todayDeathsText = root.findViewById(R.id.today_deaths);
+        totalCases = root.findViewById(R.id.phTotalCases);
+        totalRecoveries = root.findViewById(R.id.phTotalRecoveries);
+        totalAdmitted = root.findViewById(R.id.phTotalAdmitted);
+        totalDeaths = root.findViewById(R.id.phTotalDeaths);
+        fatalityRate = root.findViewById(R.id.phFatality);
+        recoveryRate = root.findViewById(R.id.phTotalRecovery);
         globalRecoveredtv = root.findViewById(R.id.today_recoveredGlobal);
         globalConfirmedtv = root.findViewById(R.id.today_confirmedGlobal);
         globalDeathstv = root.findViewById(R.id.today_deathsGlobal);
@@ -83,35 +86,55 @@ public class OverviewFragment extends Fragment {
         requestQueue = Volley.newRequestQueue(this.getActivity());
 
         getTodayPH_2();
-        getTodayPH_1();
+        getTotalDataPH();
         getDataPH();
         getDataGlobal();
 
         return root;
     }
 
-    public void getTodayPH_1() {
-        String url = "https://covidapi.info/api/v1/country/PHL/latest";
+    public void getTotalDataPH() {
+        String url = "https://coronavirus-ph-api.herokuapp.com/total";
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(JSONObject data) {
                         try {
-                            Date current = Calendar.getInstance().getTime();
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                            String currentDate = simpleDateFormat.format(current);
-                            JSONObject today = response.getJSONObject(currentDate);
-                            int todayConfirmed = today.getInt("confirmed");
-                            int todayRecovered = today.getInt("recovered");
-                            int todayDeaths = today.getInt("deaths");
+                            int todayConfirmed = data.getInt("cases_today");
+                            int todayRecovered = data.getInt("recoveries_today");
+                            int todayDeaths = data.getInt("deaths_today");
+                            int totalCasesph = data.getInt("cases");
+                            int totalRecoveryph = data.getInt("recoveries");
+                            int totalAdmittedph = data.getInt("admitted");
+                            int totalDeathsph = data.getInt("deaths");
+
+                            String recovery_rate = data.getString("recovery_rate");
+                            String fatality_rate = data.getString("fatality_rate");
+                            String recoveryR = String.format("%.2f", Float.parseFloat(recovery_rate));
+                            String fatalityR = String.format("%.2f", Float.parseFloat(fatality_rate));
+
                             String today_recovered = "Recovered: " + todayRecovered;
                             String today_confirmed = "Confirmed: " + todayConfirmed;
                             String today_deaths = "Deaths: " + todayDeaths;
 
+                            String totalC = "Cases: " + totalCasesph;
+                            String totalA = "Admitted: " + totalAdmittedph;
+                            String totalR = "Recoveries: " + totalRecoveryph;
+                            String totalD = "Deaths: " + totalDeathsph;
+
+                            String rr = "Recovery Rate: " + recoveryR + "%";
+                            String fr = "Fatality Rate: " + fatalityR + "%";
+
                             todayRecoveredText.setText(today_recovered);
                             todayConfirmedText.setText(today_confirmed);
                             todayDeathsText.setText(today_deaths);
+                            totalCases.setText(totalC);
+                            totalAdmitted.setText(totalA);
+                            totalRecoveries.setText(totalR);
+                            totalDeaths.setText(totalD);
+                            recoveryRate.setText(rr);
+                            fatalityRate.setText(fr);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -146,8 +169,7 @@ public class OverviewFragment extends Fragment {
                             updatedAt.setText(parsed);
                             updatedAtGlobal.setText(parsed);
 
-                            getLatestData(jsonObject);
-                            getCalculatedData(jsonObject);
+                            getLatestGlobal(jsonObject);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -237,35 +259,7 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void getCalculatedData(JSONObject jsonObject) throws JSONException {
-        JSONObject latest_data = jsonObject.getJSONObject("latest_data");
-        JSONObject calculated = latest_data.getJSONObject("calculated");
-
-        String recovery_rate = calculated.getString("recovery_rate");
-        String cases_per_m_pop = calculated.getString("cases_per_million_population");
-        String recovery_death_ratio = calculated.getString("recovered_vs_death_ratio");
-        String death_rate = calculated.getString("death_rate");
-
-        String a1 = String.format("%.2f", Float.parseFloat(recovery_rate));
-        String a2 = String.format("%.2f", Float.parseFloat(cases_per_m_pop));
-        String a4 = String.format("%.2f", Float.parseFloat(death_rate));
-
-        String calculated_recovery_rate = "Recovery %: " + a1 + "%";
-        textRecovery.setText(calculated_recovery_rate);
-
-        String calculated_cpm_population = "CpM Pop.: " + a2 + "%";
-        textCpm.setText(calculated_cpm_population);
-
-        if (!recovery_death_ratio.equals("null")) {
-            String calculated_dr_ratio = "Recovery vs. Death %: " + recovery_death_ratio + "%";
-            textRvd.setText(calculated_dr_ratio);
-        }
-
-        String calculated_death_rate = "Death %: " + a4 + "%";
-        textDeaths.setText(calculated_death_rate);
-    }
-
-    public void getLatestData(JSONObject jsonObject) throws JSONException {
+    public void getLatestGlobal(JSONObject jsonObject) throws JSONException {
         JSONObject latest_data = jsonObject.getJSONObject("latest_data");
 
         int recovered = latest_data.getInt("recovered");
@@ -304,7 +298,7 @@ public class OverviewFragment extends Fragment {
 
     public String parseDate(String time) {
         String inputPattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
-        String outputPattern = "EEE, MMM dd HH:ss";
+        String outputPattern = "EEE, MMM dd, HH:ss";
         //String outputPattern = "EEE, MMMM dd, yyyy hh:mm a";
         SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
         SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);

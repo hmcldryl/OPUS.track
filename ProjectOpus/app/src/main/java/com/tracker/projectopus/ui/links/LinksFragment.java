@@ -25,6 +25,7 @@ public class LinksFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_links, container, false);
 
         androidx.cardview.widget.CardView whoCardBtn = root.findViewById(R.id.whoCardBtn);
+        androidx.cardview.widget.CardView dohCardBtn = root.findViewById(R.id.dohCardBtn);
 
         whoCardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,11 +34,25 @@ public class LinksFragment extends Fragment {
             }
         });
 
+
+        dohCardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDoh();
+            }
+        });
+
         return root;
     }
 
     private void goToWho () {
         Uri uriUrl = Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019");
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+
+    private void goToDoh () {
+        Uri uriUrl = Uri.parse("https://www.doh.gov.ph/");
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }

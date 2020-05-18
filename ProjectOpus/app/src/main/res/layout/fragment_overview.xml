@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -24,96 +24,197 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/phFlag"
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_philippines" />
-
                     <RelativeLayout
+                        android:id="@+id/ph2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toEndOf="@+id/phFlag"
-                        android:paddingStart="0dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="5dp"
-                        android:paddingBottom="5dp">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_below="@+id/ph1"
+                        android:orientation="vertical">
                         <TextView
-                            android:id="@+id/today"
+                            android:id="@+id/phData1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:fontFamily="@font/montserrat_bold"
-                            android:text="Philippines Today"
+                            android:text="All-Time Data"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
-
                         <TextView
-                            android:id="@+id/updatedAsOf"
+                            android:id="@+id/phData"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:layout_toEndOf="@+id/today"
-                            android:fontFamily="@font/montserrat"
-                            android:text="(EEE, MMMM dd)"
+                            android:layout_marginEnd="2dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="All-Time Data"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
-
                         <TextView
-                            android:id="@+id/today_population"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/today"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Population:"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/today_confirmed"
+                            android:id="@+id/phTotalCases"
                             android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/today_recovered"
+                            android:layout_below="@id/phData"
                             android:fontFamily="@font/montserrat"
-                            android:text="Confirmed: 0"
+                            android:text="Cases: 0"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
-
                         <TextView
-                            android:id="@+id/today_deaths"
+                            android:id="@+id/phTotalRecoveries"
                             android:layout_width="125dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/today_recovered"
-                            android:layout_toEndOf="@+id/today_confirmed"
+                            android:layout_below="@id/phTotalCases"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Recoveries: 0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/phTotalAdmitted"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phTotalRecoveries"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Admitted: 0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/phTotalRecovery"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phData"
+                            android:layout_toEndOf="@+id/phTotalCases"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Recovery Rate: 0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/phFatality"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phTotalRecovery"
+                            android:layout_toEndOf="@+id/phTotalRecoveries"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Fatality Rate: 0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/phTotalDeaths"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phFatality"
+                            android:layout_toEndOf="@+id/phTotalAdmitted"
                             android:fontFamily="@font/montserrat"
                             android:text="Deaths: 0"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/today_recovered"
-                            android:layout_width="125dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/today_population"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Recovered: 0"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp" />
                     </RelativeLayout>
 
+                    <RelativeLayout
+                        android:id="@+id/ph1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/phFlag"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_philippines" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/phFlag"
+                            android:paddingStart="0dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="2dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Philippines Today"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/updatedAsOf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_toEndOf="@+id/today"
+                                android:fontFamily="@font/montserrat"
+                                android:text="(EEE, MMMM dd)"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/today_population"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/today"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Population:"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/today_confirmed"
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/today_recovered"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Confirmed: 0"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/today_deaths"
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/today_recovered"
+                                android:layout_toEndOf="@+id/today_confirmed"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Deaths: 0"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/today_recovered"
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/today_population"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Recovered: 0"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </RelativeLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -355,7 +456,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/phData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/latestToday2"
@@ -364,9 +464,15 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/caseTimelineReports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
+
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
