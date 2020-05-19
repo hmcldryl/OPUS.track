@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Chia sẻ với"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Chia sẻ với <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Thu gọn"</string>
+    <string name="appupdater_btn_disable">Không hỏi lại</string>
+    <string name="appupdater_btn_dismiss">Bỏ qua</string>
+    <string name="appupdater_btn_update">Tải bản cập nhật về</string>
+    <string name="appupdater_update_available">Cập nhật mới tính năng sẵn có!</string>
+    <string name="appupdater_update_available_description_dialog">Cập nhật %1$s hiện có sẵn để tải về. Khi tải về các bản cập nhật mới nhất bạn sẽ nhận được các tính năng mới nhất của %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Cập nhật %1$s hiện có sẵn để tải về.\n\nBạn có thể có được những tính năng mới:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">Cập nhật %1$s của %2$s hiện có sẵn để tải về</string>
+    <string name="appupdater_update_available_description_snackbar">Cập nhật %1$s hiện có sẵn!</string>
+    <string name="appupdater_update_not_available">Không cập nhật</string>
+    <string name="appupdater_update_not_available_description">Bạn có phiên bản cập nhật mới nhất của %s!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Di chuyển lên"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Mở ngăn điều hướng"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Tìm kiếm"</string>

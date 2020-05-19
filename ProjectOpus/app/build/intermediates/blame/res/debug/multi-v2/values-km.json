@@ -4,23 +4,6 @@
             "outputFile": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-km\\values-km.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-2\\files-2.1\\3e8a8e2d6263ae18986b4aa436a0c50e\\navigation-ui-2.2.1\\res\\values-km\\values-km.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,160",
-                        "endColumns": "104,104",
-                        "endOffsets": "155,260"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2793,2898",
-                        "endColumns": "104,104",
-                        "endOffsets": "2893,2998"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-2\\files-2.1\\34b4ab0d8b65ac74ddd00d45b26dd963\\core-1.1.0\\res\\values-km\\values-km.xml",
                     "from": {
                         "startLines": "2",
@@ -35,6 +18,23 @@
                         "startOffsets": "3086",
                         "endColumns": "100",
                         "endOffsets": "3182"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-2\\files-2.1\\f262923402dad6cf015f35bad166cdee\\navigation-ui-2.2.2\\res\\values-km\\values-km.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,160",
+                        "endColumns": "104,104",
+                        "endOffsets": "155,260"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2793,2898",
+                        "endColumns": "104,104",
+                        "endOffsets": "2893,2998"
                     }
                 },
                 {

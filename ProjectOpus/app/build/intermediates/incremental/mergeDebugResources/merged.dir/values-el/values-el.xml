@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Κοινοποίηση σε"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Κοινοποίηση στην εφαρμογή <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Σύμπτυξη"</string>
+    <string name="appupdater_btn_disable">Να μην εμφανιστεί ξανά</string>
+    <string name="appupdater_btn_dismiss">Απόκρυψη</string>
+    <string name="appupdater_btn_update">Ενημέρωση</string>
+    <string name="appupdater_update_available">Νέα έκδοση διαθέσιμη!</string>
+    <string name="appupdater_update_available_description_dialog">Η ενημέρωση %1$s είναι διαθέσιμη για λήψη. Με την λήψη της τελευταίας ενημέρωσης θα έχετε τις τελευταίες λειτουργίες, διορθώσεις και βελτιώσεις του %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Η ενημέρωση %1$s είναι διαθέσιμη για λήψη.\n\nΜπορείτε να λάβετε τις νέες λειτουργίες:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">Ενημέρωση %1$s του %2$s διαθέσιμη για λήψη</string>
+    <string name="appupdater_update_available_description_snackbar">Η ενημέρωση %1$s είναι διαθέσιμη!</string>
+    <string name="appupdater_update_not_available">Δεν υπάρχουν νέες ενημερώσεις</string>
+    <string name="appupdater_update_not_available_description">Έχετε την τελευταία έκδοση του %s διαθέσιμη!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Πλοήγηση προς τα επάνω"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Άνοιγμα συρταριού πλοήγησης"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Αναζήτηση"</string>

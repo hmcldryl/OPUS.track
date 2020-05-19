@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Zdieľať s"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Zdieľať s aplikáciou <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Zbaliť"</string>
+    <string name="appupdater_btn_disable">Nezobrazovať znovu</string>
+    <string name="appupdater_btn_dismiss">Zrušiť</string>
+    <string name="appupdater_btn_update">Aktualizovať</string>
+    <string name="appupdater_update_available">Dostupná nová aktualizácia!</string>
+    <string name="appupdater_update_available_description_dialog">Aktualizácia %1$s je dostupná na stiahnutie. Stiahnutím najnovšej aktualizácie získate nové funkcie, vylepšenia a opravy chýb pre %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Aktualizácia %1$s je dostupná na stiahnutie.\n\nZískate tieto nové funkcie:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">Aktualizácia %1$s aplikácie %2$s je dostupná na stiahnutie</string>
+    <string name="appupdater_update_available_description_snackbar">Aktualizácia %1$s je dostupná!</string>
+    <string name="appupdater_update_not_available">Žiadne dostupné aktualizácie</string>
+    <string name="appupdater_update_not_available_description">Máte najnovšiu dostupnú verziu %s!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Prejsť hore"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Otvoriť navigačný vysúvací panel"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Hľadať"</string>

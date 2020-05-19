@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Partager avec"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Partager avec <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Réduire"</string>
+    <string name="appupdater_btn_disable">Ne plus afficher</string>
+    <string name="appupdater_btn_dismiss">Annuler</string>
+    <string name="appupdater_btn_update">Télécharger</string>
+    <string name="appupdater_update_available">Nouvelle mise à jour disponible!</string>
+    <string name="appupdater_update_available_description_dialog">La mise à jour %1$s est disponible. En téléchargeant cette version de l\'application, vous aurez accès aux dernières fonctionnalités et améliorations de %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">La mise à jour %1$s est disponible.\n\nVous pouvez bénéficier des fonctionnalités suivantes:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">La mise à jour %1$s de %2$s est disponible.</string>
+    <string name="appupdater_update_available_description_snackbar">Mise à jour %1$s disponible!</string>
+    <string name="appupdater_update_not_available">Aucune mise à jour disponible</string>
+    <string name="appupdater_update_not_available_description">Vous avez la dernière version disponible de %s!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Remonter"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Ouvrir le panneau de navigation"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Rechercher"</string>

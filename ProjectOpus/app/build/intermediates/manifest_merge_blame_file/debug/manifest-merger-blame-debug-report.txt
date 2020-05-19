@@ -13,59 +13,63 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:5:5-67
 11-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:5:22-64
-12
-13    <application
-13-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:7:5-27:19
-14        android:allowBackup="true"
-14-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:8:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
-16        android:debuggable="true"
-17        android:extractNativeLibs="false"
-18        android:icon="@mipmap/ic_launcher"
-18-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:9:9-43
-19        android:label="@string/app_name"
-19-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:10:9-41
-20        android:roundIcon="@mipmap/ic_launcher"
-20-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:11:9-48
-21        android:supportsRtl="true"
-21-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:12:9-35
-22        android:theme="@style/AppTheme"
-22-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:13:9-40
-23        android:usesCleartextTraffic="true" >
-23-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:14:9-44
-24        <uses-library
-24-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:16:9-18:40
-25            android:name="org.apache.http.legacy"
-25-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:17:13-50
-26            android:required="false" />
-26-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:18:13-37
-27
-28        <activity android:name="com.tracker.projectopus.MainActivity" >
-28-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:20:9-26:20
-28-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:20:19-47
-29            <intent-filter>
-29-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:21:13-25:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:22:17-69
-30-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:22:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:24:17-77
-32-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:24:27-74
-33            </intent-filter>
-34        </activity>
-35
-36        <provider
-36-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-37-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-38            android:authorities="com.tracker.projectopus.lifecycle-process"
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-39            android:exported="false"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-40            android:multiprocess="true" />
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-41    </application>
-42
-43</manifest>
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.github.javiersantos:AppUpdater:2.7] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\6e1c50c48209150689132f6753b29aa9\jetified-AppUpdater-2.7\AndroidManifest.xml:12:5-79
+12-->[com.github.javiersantos:AppUpdater:2.7] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\6e1c50c48209150689132f6753b29aa9\jetified-AppUpdater-2.7\AndroidManifest.xml:12:22-76
+13
+14    <application
+14-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:7:5-27:19
+15        android:allowBackup="true"
+15-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:8:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:extractNativeLibs="false"
+19        android:icon="@mipmap/ic_launcher"
+19-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:9:9-43
+20        android:label="@string/app_name"
+20-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:10:9-41
+21        android:roundIcon="@mipmap/ic_launcher"
+21-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:11:9-48
+22        android:supportsRtl="true"
+22-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:12:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme"
+24-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:13:9-40
+25        android:usesCleartextTraffic="true" >
+25-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:14:9-44
+26        <uses-library
+26-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:16:9-18:40
+27            android:name="org.apache.http.legacy"
+27-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:17:13-50
+28            android:required="false" />
+28-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:18:13-37
+29
+30        <activity android:name="com.tracker.projectopus.MainActivity" >
+30-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:20:9-26:20
+30-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:20:19-47
+31            <intent-filter>
+31-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:21:13-25:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:22:17-69
+32-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:22:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:24:17-77
+34-->C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:24:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+40            android:authorities="com.tracker.projectopus.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\a7777210eeae7ec0839470505116d148\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+43    </application>
+44
+45</manifest>

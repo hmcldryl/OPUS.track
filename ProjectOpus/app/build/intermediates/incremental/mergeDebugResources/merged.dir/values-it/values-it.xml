@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Condividi con"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Condividi tramite <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Comprimi"</string>
+    <string name="appupdater_btn_disable">Non mostrare di nuovo</string>
+    <string name="appupdater_btn_dismiss">Ignora</string>
+    <string name="appupdater_btn_update">Aggiorna</string>
+    <string name="appupdater_update_available">Nuovo aggiornamento disponibile!</string>
+    <string name="appupdater_update_available_description_dialog">L\'aggiornamento %1$s è disponibile al download. Scaricando l\'ultimo aggiornamento avrai le ultime funzionalità, migliorie e bug fix per %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Aggiornamento %1$s è disponibile al download.\n\nPuoi avere queste nuove funzionalità:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">L\'aggiornamento %1$s di %2$s è disponibile al download</string>
+    <string name="appupdater_update_available_description_snackbar">L\'aggiornamento %1$s è disponibile!</string>
+    <string name="appupdater_update_not_available">Nessun aggiornamento disponibile</string>
+    <string name="appupdater_update_not_available_description">Hai l\'ultima versione disponibile di %s!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Torna indietro"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Apri riquadro di navigazione"</string>
     <string msgid="730395136688082741" name="search_menu_title">"Cerca"</string>

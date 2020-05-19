@@ -27,6 +27,16 @@
     <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"শেয়ার করুন"</string>
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-এর সাথে শেয়ার করুন"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"সঙ্কুচিত করুন"</string>
+    <string name="appupdater_btn_disable">আর দেখাবেন না</string>
+    <string name="appupdater_btn_dismiss">বাদ দিন</string>
+    <string name="appupdater_btn_update">আপডেট</string>
+    <string name="appupdater_update_available">নতুন আপডেট পাওয়া গেছে!</string>
+    <string name="appupdater_update_available_description_dialog">আপডেট %1$s ডাউনলোডযোগ্য\n\n সর্বশেষ আপডেট ডাউনলোড করার ফলে আপনি %2$s এর  সর্বশেষ ফিচার, উন্নতি এবং বাগ সংশোধন গুলো পাবেন।</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">আপডেট %1$s ডাউনলোডযোগ্য\n\nআপনি এই নতুন ফিচার গুলো পাবেন:\n%2$s</string>
+    <string name="appupdater_update_available_description_notification">%2$s এর %1$s আপডেট ডাউনলোডযোগ্য</string>
+    <string name="appupdater_update_available_description_snackbar">আপডেট %1$s পাওয়া গেছে!</string>
+    <string name="appupdater_update_not_available">কোনো আপডেট পাওয়া যায় নি</string>
+    <string name="appupdater_update_not_available_description">আপনি %s এর সর্বশেষ সংস্করণ ব্যবহার করছেন!</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"উপরে নেভিগেট করুন"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"নেভিগেশন ড্রয়ার খুলুন"</string>
     <string msgid="730395136688082741" name="search_menu_title">"সার্চ করুন"</string>
