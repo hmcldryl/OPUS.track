@@ -3,19 +3,12 @@ package com.tracker.projectopus;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.StyleSpan;
-import android.util.SparseArray;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -25,21 +18,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import com.tracker.projectopus.ui.home.OverviewFragment;
-
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     AppBarConfiguration appBarConfiguration;
 
@@ -47,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setUpdateFrom(UpdateFrom.GITHUB);
+        appUpdater.setGitHubUserAndRepo("hmcldryl", "OPUS.track");
+        appUpdater.start();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

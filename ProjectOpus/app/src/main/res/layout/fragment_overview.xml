@@ -315,46 +315,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!--<LinearLayout
-                android:id="@+id/latestToday1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/latestUpdate1"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
-                    android:orientation="vertical"
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp">
-
-                    <TextView
-                        android:id="@+id/casesHeader"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/montserrat_bold"
-                        android:text="List of COVID-19 Cases in the Philippines"
-                        android:textColor="@color/colorPrimary" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/caseListPh"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:layout_below="@+id/casesHeader"
-                        android:layout_marginBottom="5dp" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/timelinePh"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:layout_below="@id/caseListPh"/>
-                </RelativeLayout>
-            </LinearLayout>-->
-
             <LinearLayout
                 android:id="@+id/latestToday2"
                 android:layout_width="match_parent"
@@ -455,10 +415,25 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/overviewText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/latestToday2"
+                android:text="@string/overview1"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/latestToday2"
+                android:layout_below="@id/overviewText1"
                 android:layout_marginTop="5dp"
                 android:background="@color/colorPrimaryDark"
                 android:orientation="horizontal"

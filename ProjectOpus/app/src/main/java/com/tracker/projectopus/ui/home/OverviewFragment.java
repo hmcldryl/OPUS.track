@@ -1,8 +1,5 @@
 package com.tracker.projectopus.ui.home;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
