@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.View;
 
 import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setDisplay(Display.DIALOG);
+        appUpdater.setTitleOnUpdateAvailable("Update available");
+        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
+        appUpdater.setContentOnUpdateAvailable("Check out the latest version of this app!");
+        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
+        appUpdater.setButtonUpdate("Update now?");
+        appUpdater.setButtonDismiss("Maybe later");
         appUpdater.setUpdateFrom(UpdateFrom.GITHUB);
         appUpdater.setGitHubUserAndRepo("hmcldryl", "OPUS.track");
         appUpdater.start();
