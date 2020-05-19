@@ -27,18 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppUpdater appUpdater = new AppUpdater(this);
-        appUpdater.setDisplay(Display.DIALOG);
-        appUpdater.setTitleOnUpdateAvailable("Update available");
-        appUpdater.setTitleOnUpdateNotAvailable("Update not available");
-        appUpdater.setContentOnUpdateAvailable("Check out the latest version of this app!");
-        appUpdater.setContentOnUpdateNotAvailable("No update available. Check for updates again later!");
-        appUpdater.setButtonUpdate("Update now?");
-        appUpdater.setButtonDismiss("Maybe later");
-        appUpdater.setUpdateFrom(UpdateFrom.GITHUB);
-        appUpdater.setGitHubUserAndRepo("hmcldryl", "OPUS.track");
-        appUpdater.start();
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

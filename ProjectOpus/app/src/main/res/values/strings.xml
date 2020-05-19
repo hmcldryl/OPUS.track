@@ -12,4 +12,20 @@
     <string name="hotline_hospital"><b>Provincial Hospital</b>\n169 / (048) – 433 – 2621\n<b>Provincial Health Office</b>\n(048) – 433 – 2721\n<b>Palawan Adventist Hospital</b>\n(048) – 433 – 2156\n<b>City Health Office</b>\n(048) – 434 – 6582\n<b>Cooperative Hospital</b>\n(048) – 434–3255 / 434–5580</string>
     <string name="hotline_rc"><b>PNRC:</b>\n(048) 433 – 6362\n<b>Office of the City Mayor</b>\n(048) 717–8000\n<b>Department of Interior and Local Government (DILG)</b>\n0927–422–6300 / 0915–005–4535 – <b>GLOBE</b>\n0961–772–1668 / 0961–384–9272 – <b>SMART</b>\n(02) 8763454 / LOCAL 8801–8815 – <b>TRUNKLINE</b></string>
     <string name="hotline_brgy"><b>BACUNGAN</b> - 0906–345–4046\n<b>BAGONG PAG-ASA</b> - 0916–105–5010\n<b>BAGONG SIKAT</b> - 0945–692–4569\n<b>BAONG SILANG</b> - 0920–423–1859\n<b>BAHILE</b> - 0909–873–8127\n<b>BANCAO-BANCAO</b> - 0912–169–5689 / 0975–780–3479\n<b>BUENAVISTA</b> - 0905–712–6404\n<b>CABAYUGAN</b> - 0975–728–5435\n<b>INAGAWAN</b> - 0935–341–7856 / 0975–855–7273\n<b>IRAWAN</b> - 0965–953–7209\n<b>KALIPAY</b> - 0908–452–1366\n<b>KAMUNING</b> - 0936–101–8574 / 0977–042–4073\n<b>LIWANAG</b> - 0910–497–3815\n<b>LUZVIMINDA</b> - 0917–702–9155 / 0997–941–7710\n<b>MACARASCAS</b> - 0926–852–5746\n<b>MALIGAYA</b> - 0950–491–8917\n<b>MANDARAGAT</b> - 0929–886–4627\n<b>MANGGAHAN</b> - 433–2188\n<b>MANINGNING</b> - 434–0608\n<b>MASIPAG</b> - 0943–132–2642\n<b>MATAHIMIK</b> - 0977–711–1115\n<b>MATIYAGA</b> - 0955–316–503\n<b>MALIGROSA</b> - 0915–848–2822\n<b>MODEL</b> - 0975–940–1269\n<b>MONTIBLE</b> - 0997–977–5379\n<b>PAGKAKAISA</b> - 0939–949–9347 / 0955–855–3435\n<b>SALVACION</b> - 0909–335–2624\n<b>SAN JOSE</b> - 0928–475–2549 / 0975–202–3872\n<b>SAN MANUEL</b> - 0967–887–0121\n<b>SAN MIGUEL</b> - 0967–350–5811 / 0975–202–3872\n<b>SAN PEDRO</b> 0912–290–0607\n<b>SEASIDE (SAN ISIDRO)</b> - 0955–702–6123\n<b>SICSICAN</b> - 0949–164–4111 / 0965–248–5396\n<b>STA. LOURDES</b> - 0920–325–1368\n<b>STA. LUCIA</b> - 0967–543–9820\n<b>STA. MONICA</b> - 0919–541–2671\n<b>TAGABINET</b> - 0936–116–0013\n<b>TAGBUROS</b> - 0907–646–5832 / 0912–575–1121\n<b>TAGUMPAY</b> - 434–0537\n<b>TINIGUIBAN</b> - 0999–537–4052</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
