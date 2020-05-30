@@ -4,72 +4,67 @@ import java.util.Date;
 
 public class TrackerChart {
 
-    private String phCase;
-    private String phDate;
-    private String phAge;
-    private String phGender;
-    private String phNationality;
-    private String phHospital;
-    private String phTravelHistory;
-    private String phStatus;
-    private String phLat;
-    private String phLong;
-    private String phResident;
+    private String case_code;
+    private String age;
+    private String sex;
+    private String is_admitted;
+    private String date_reported;
+    private String date_died;
+    private String recovered_on;
+    private String location;
+    private String latitude;
+    private String longitude;
 
-    public TrackerChart(String phCase,
-                        String phDate,
-                        String phAge,
-                        String phGender,
-                        String phNationality,
-                        String phHospital,
-                        String phTravelHistory,
-                        String status,
+    public TrackerChart(String case_code,
+                        String age,
+                        String sex,
+                        String is_admitted,
+                        String date_reported,
+                        String date_died,
+                        String recovered_on,
+                        String location,
                         String phLat,
-                        String phLong,
-                        String phResident) {
+                        String phLong) {
     }
 
-    public String getPhCase() {
-        return phCase;
+    public String getCase_code() {
+        return case_code;
     }
 
-    public String getPhDate() {
-        return phDate;
+    public String getAge() {
+        return age;
     }
 
-    public String getPhAge() {
-        return phAge;
+    public String getSex() {
+        return sex;
     }
 
-    public String getPhGender() {
-        return phGender;
+    public String getIs_admitted() {
+        return is_admitted;
     }
 
-    public String getPhNationality() {
-        return phNationality;
+    public String getDate_reported() {
+        return date_reported;
     }
 
-    public String getPhHospital() {
-        return phHospital;
+    public String getDate_died() {
+        return date_died;
     }
 
-    public String getPhTravelHistory() {
-        return phTravelHistory;
+    public String getRecovered_on() {
+        return recovered_on;
     }
 
-    public String getPhStatus() {
-        return phStatus;
+    public String getLocation() {
+        return location;
     }
 
-    public String getPhLat() {
-        return phLat;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public String getPhLong() {
-        return phLong;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public String getPhResident() {
-        return phResident;
-    }
 }

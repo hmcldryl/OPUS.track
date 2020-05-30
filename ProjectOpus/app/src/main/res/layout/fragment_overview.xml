@@ -32,91 +32,99 @@
                         android:id="@+id/ph2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_below="@+id/ph1"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="6dp"
-                        android:layout_below="@+id/ph1"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/phData1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:fontFamily="@font/montserrat_bold"
-                            android:text="All-Time Data"
-                            android:textAlignment="textStart"
+                            android:text="Philippine All-Time Data"
+                            android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phData"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:fontFamily="@font/montserrat_bold"
-                            android:text="All-Time Data"
+                            android:text=""
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phTotalCases"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phData"
                             android:fontFamily="@font/montserrat"
-                            android:text="Cases: 0"
+                            android:text="Cases: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phTotalRecoveries"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phTotalCases"
                             android:fontFamily="@font/montserrat"
-                            android:text="Recoveries: 0"
+                            android:text="Recoveries: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phTotalAdmitted"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phTotalRecoveries"
                             android:fontFamily="@font/montserrat"
-                            android:text="Admitted: 0"
+                            android:text="Admitted: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phTotalRecovery"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phData"
                             android:layout_toEndOf="@+id/phTotalCases"
                             android:fontFamily="@font/montserrat"
-                            android:text="Recovery Rate: 0"
+                            android:text="Recovery Rate: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phFatality"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phTotalRecovery"
                             android:layout_toEndOf="@+id/phTotalRecoveries"
                             android:fontFamily="@font/montserrat"
-                            android:text="Fatality Rate: 0"
+                            android:text="Fatality Rate: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
+
                         <TextView
                             android:id="@+id/phTotalDeaths"
-                            android:layout_width="125dp"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/phFatality"
                             android:layout_toEndOf="@+id/phTotalAdmitted"
                             android:fontFamily="@font/montserrat"
-                            android:text="Deaths: 0"
+                            android:text="Deaths: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -141,8 +149,7 @@
                             android:layout_toEndOf="@+id/phFlag"
                             android:paddingStart="0dp"
                             android:paddingTop="5dp"
-                            android:paddingEnd="5dp"
-                            android:paddingBottom="5dp">
+                            android:paddingEnd="5dp">
 
                             <TextView
                                 android:id="@+id/today"
@@ -150,7 +157,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="2dp"
                                 android:fontFamily="@font/montserrat_bold"
-                                android:text="Philippines Today"
+                                android:text="Philippines"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp" />
@@ -168,23 +175,34 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/today_population"
+                                android:id="@+id/today_pop"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/today"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Population:"
+                                android:text="Population: -n/a-"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/today_confirmed"
+                                android:id="@+id/today_cases"
                                 android:layout_width="125dp"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/today_recovered"
+                                android:layout_below="@id/today_pop"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Confirmed: 0"
+                                android:text="Cases: -n/a-"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/today_admitted"
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/today_cases"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Admitted: -n/a-"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp" />
@@ -194,9 +212,9 @@
                                 android:layout_width="125dp"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/today_recovered"
-                                android:layout_toEndOf="@+id/today_confirmed"
+                                android:layout_toEndOf="@+id/today_admitted"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Deaths: 0"
+                                android:text="Deaths: -n/a-"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp" />
@@ -205,9 +223,10 @@
                                 android:id="@+id/today_recovered"
                                 android:layout_width="125dp"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/today_population"
+                                android:layout_below="@id/today_pop"
+                                android:layout_toEndOf="@id/today_cases"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Recovered: 0"
+                                android:text="Recoveries: -n/a-"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp" />
@@ -215,104 +234,6 @@
                     </RelativeLayout>
                 </RelativeLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/latestUpdate1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/latestToday"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/dataRecovered"
-                        android:layout_width="115dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Recovered:"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/dataConfirmed"
-                        android:layout_width="115dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Confirmed:"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/dataCritical"
-                        android:layout_width="115dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Critical:"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/dataDeaths"
-                        android:layout_width="115dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Deaths:"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/calculatedRecoveryRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Recovery %:  -n/a-"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/calculatedCpmRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="CpM Pop.:  -n/a-"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/calculatedRvdRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Recovery vs. Death %:  -n/a-"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/calculatedDeathsRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="Death %:  -n/a-"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -350,7 +271,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:fontFamily="@font/montserrat_bold"
-                            android:text="World Today"
+                            android:text="Worldwide"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -362,7 +283,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_toEndOf="@+id/today1"
                             android:fontFamily="@font/montserrat"
-                            android:text="(EEE, MMMM dd)"
+                            android:text="(EEE, MMM dd, HH:ss)"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -373,7 +294,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/today1"
                             android:fontFamily="@font/montserrat"
-                            android:text="Population:"
+                            android:text="Population: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -382,20 +303,20 @@
                             android:id="@+id/today_recoveredGlobal"
                             android:layout_width="145dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/today_populationGlobal"
+                            android:layout_below="@id/today_casesGlobal"
                             android:fontFamily="@font/montserrat"
-                            android:text="Recovered: 0"
+                            android:text="Recovered: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/today_confirmedGlobal"
+                            android:id="@+id/today_casesGlobal"
                             android:layout_width="145dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/today_recoveredGlobal"
+                            android:layout_below="@id/today_populationGlobal"
                             android:fontFamily="@font/montserrat"
-                            android:text="Confirmed: 0"
+                            android:text="Cases: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -404,10 +325,10 @@
                             android:id="@+id/today_deathsGlobal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/today_recoveredGlobal"
-                            android:layout_toEndOf="@+id/today_confirmedGlobal"
+                            android:layout_below="@+id/today_casesGlobal"
+                            android:layout_toEndOf="@+id/today_recoveredGlobal"
                             android:fontFamily="@font/montserrat"
-                            android:text="Deaths: 0"
+                            android:text="Deaths: -n/a-"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -419,35 +340,56 @@
                 android:id="@+id/overviewText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:layout_below="@id/latestToday2"
+                android:fontFamily="@font/montserrat"
                 android:paddingStart="20dp"
+                android:paddingTop="10dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="10dp"
-                android:layout_below="@id/latestToday2"
                 android:text="@string/overview1"
                 android:textAlignment="textStart"
-                android:fontFamily="@font/montserrat"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
 
             <LinearLayout
+                android:id="@+id/casesContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/overviewText1"
                 android:layout_marginTop="5dp"
                 android:background="@color/colorPrimaryDark"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="10dp">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/caseTimelineReports"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Cases Summary (DOH Data Drop)"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
 
-                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/casesSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_below="@id/casesContainer"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

@@ -17,69 +17,69 @@
         android:paddingStart="5dp"
         android:paddingEnd="5dp">
         <TextView
-            android:id="@+id/case_no"
+            android:id="@+id/case_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="@font/montserrat"
-            android:text="Case No.: TBD"
-            android:textSize="15sp"/>
-        <TextView
-            android:id="@+id/case_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/case_no"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="@font/montserrat"
-            android:text="Date: TBD"
-            android:textSize="15sp"/>
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Case No.: -n/a-"
+            android:textSize="14sp"/>
         <TextView
             android:id="@+id/case_age"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/case_date"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="@font/montserrat"
-            android:text="Age: TBD"
-            android:textSize="15sp"/>
-        <TextView
-            android:id="@+id/case_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/case_date"
-            android:layout_toEndOf="@+id/case_age"
+            android:layout_below="@+id/case_code"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Gender: TBD"
-            android:textSize="15sp"/>
+            android:text="Age: -n/a-"
+            android:textSize="12sp"/>
         <TextView
-            android:id="@+id/case_nationality"
-            android:layout_width="180dp"
+            android:id="@+id/case_sex"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/case_gender"
+            android:layout_below="@id/case_age"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Nationality: TBD"
-            android:textSize="15sp"/>
+            android:text="Sex: -n/a-"
+            android:textSize="12sp"/>
         <TextView
-            android:id="@+id/case_hospital"
+            android:id="@+id/case_is_admitted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_age"
+            android:layout_toEndOf="@+id/case_sex"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Is admitted: -n/a-"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/case_reported_on"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/case_sex"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat"
+            android:text="Reported on: -n/a-"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/case_location1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/case_location"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Hospital Admitted To: TBD"
-            android:textSize="15sp"/>
+            android:text="X+Y: -n/a-"
+            android:textSize="12sp"/>
         <TextView
-            android:id="@+id/case_travel"
+            android:id="@+id/case_died_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/case_gender"
-            android:layout_toEndOf="@+id/case_nationality"
+            android:layout_below="@id/case_is_admitted"
+            android:layout_toEndOf="@+id/case_reported_on"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Has Travel History: TBD"
-            android:textSize="15sp"/>
+            android:text="Died on: -n/a-"
+            android:textSize="12sp"/>
         <RelativeLayout
             android:id="@+id/case_statusBox"
             android:layout_width="150dp"
@@ -88,36 +88,36 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:background="@color/colorPrimaryDark">
-        <TextView
-            android:id="@+id/case_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/colorPrimary"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Status: TBD"
-            android:textAlignment="center"
-            android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/case_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="-n/a-"
+                android:textAlignment="center"
+                android:textSize="14sp"/>
         </RelativeLayout>
         <TextView
             android:id="@+id/case_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/case_resident"
+            android:layout_below="@id/case_recovered_on"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Location: TBD"
-            android:textSize="15sp"/>
+            android:text="Location: -n/a-"
+            android:textSize="12sp"/>
         <TextView
-            android:id="@+id/case_resident"
+            android:id="@+id/case_recovered_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/case_nationality"
+            android:layout_below="@id/case_reported_on"
             android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/montserrat"
-            android:text="Resident of: TBD"
-            android:textSize="15sp"/>
+            android:text="Recovered on: -n/a-"
+            android:textSize="12sp"/>
 
 
 

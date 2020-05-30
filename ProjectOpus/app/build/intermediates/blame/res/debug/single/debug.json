@@ -56,12 +56,12 @@
         "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_covid.xml.flat",
         "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\layout\\fragment_covid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\drawable_opustrack_bg.png.flat",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
-        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main.xml.flat",
-        "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\layout\\nav_header_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\src\\main\\res\\layout\\nav_header_main.xml"
     },
     {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\OpusTrack\\ProjectOpus\\app\\build\\intermediates\\res\\merged\\debug\\layout_timeline_list.xml.flat",

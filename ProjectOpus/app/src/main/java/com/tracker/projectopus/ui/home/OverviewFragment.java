@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -16,17 +17,13 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.tracker.projectopus.ChartAdapter;
 import com.tracker.projectopus.R;
-import com.tracker.projectopus.TimelineAdapter;
 import com.tracker.projectopus.TrackerChart;
-import com.tracker.projectopus.TrackerTimeline;
 
 import java.util.ArrayList;
 
@@ -36,20 +33,15 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.Locale;
 
 public class OverviewFragment extends Fragment {
 
-    private RecyclerView recyclerView1, recyclerView2;
-    private ArrayList<TrackerTimeline> timelineArrayList;
+    private RecyclerView localCaseData;
     private ArrayList<TrackerChart> casesArrayList;
     private RequestQueue requestQueue;
-    private TextView text0, text1, text2, text3, textRecovery, textCpm, textRvd, textDeaths,
-            phPopulation, todayRecoveredText, todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
+    private TextView phPopulation, todayRecoveredText,
+            todayConfirmedText, todayDeathsText, updatedAt, updatedAtGlobal,
             globalConfirmedtv, globalRecoveredtv, globalDeathstv, totalRecoveries, totalDeaths, totalAdmitted,
             fatalityRate, recoveryRate, totalCases;
     private OverviewViewModel overviewViewModel;
@@ -61,13 +53,9 @@ public class OverviewFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_overview, container, false);
 
         updatedAt = root.findViewById(R.id.updatedAsOf);
-        phPopulation = root.findViewById(R.id.today_population);
-        text0 = root.findViewById(R.id.dataDeaths);
-        text1 = root.findViewById(R.id.dataConfirmed);
-        text2 = root.findViewById(R.id.dataRecovered);
-        text3 = root.findViewById(R.id.dataCritical);
+        phPopulation = root.findViewById(R.id.today_pop);
         todayRecoveredText = root.findViewById(R.id.today_recovered);
-        todayConfirmedText = root.findViewById(R.id.today_confirmed);
+        todayConfirmedText = root.findViewById(R.id.today_cases);
         todayDeathsText = root.findViewById(R.id.today_deaths);
         totalCases = root.findViewById(R.id.phTotalCases);
         totalRecoveries = root.findViewById(R.id.phTotalRecoveries);
@@ -76,60 +64,84 @@ public class OverviewFragment extends Fragment {
         fatalityRate = root.findViewById(R.id.phFatality);
         recoveryRate = root.findViewById(R.id.phTotalRecovery);
         globalRecoveredtv = root.findViewById(R.id.today_recoveredGlobal);
-        globalConfirmedtv = root.findViewById(R.id.today_confirmedGlobal);
+        globalConfirmedtv = root.findViewById(R.id.today_casesGlobal);
         globalDeathstv = root.findViewById(R.id.today_deathsGlobal);
         updatedAtGlobal = root.findViewById(R.id.updatedAsOf1);
+        localCaseData = root.findViewById(R.id.casesSummary);
+
+        localCaseData.setHasFixedSize(true);
+        localCaseData.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        casesArrayList = new ArrayList<>();
+
+        //Snackbar.make(root, "No action yet.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+        //Toast toast=Toast.makeText(this.getActivity(),"Stay at home if your feel unwell.\nIf " +
+                //"you have a fever, cough and difficulty breathing, seek medical attention and call in advance.\n" +
+                ///"Follow the directions of your local health authority.\n" +
+                //"- World Health Organization",Toast.LENGTH_SHORT);
+        //toast.show();
 
         requestQueue = Volley.newRequestQueue(this.getActivity());
 
-        getTodayPH_2();
-        getTotalDataPH();
-        getDataPH();
-        getDataGlobal();
+        getLocalData();
+        getLocalData_more();
+        getGlobalData();
+        getLocalCaseData();
 
         return root;
     }
 
-    public void getTotalDataPH() {
+    public void getLocalData() {
         String url = "https://coronavirus-ph-api.herokuapp.com/total";
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONObject data) {
+                    public void onResponse(JSONObject response) {
                         try {
-                            int todayConfirmed = data.getInt("cases_today");
-                            int todayRecovered = data.getInt("recoveries_today");
+                            JSONObject data = response.getJSONObject("data");
+
+                            int todayCases = data.getInt("cases_today");
                             int todayDeaths = data.getInt("deaths_today");
-                            int totalCasesph = data.getInt("cases");
-                            int totalRecoveryph = data.getInt("recoveries");
-                            int totalAdmittedph = data.getInt("admitted");
-                            int totalDeathsph = data.getInt("deaths");
+                            int todayRecoveries = data.getInt("recoveries_today");
+
+                            int admitted = data.getInt("admitted");
+                            int cases = data.getInt("cases");
+                            int deaths = data.getInt("deaths");
+                            int recoveries = data.getInt("recoveries");
 
                             String recovery_rate = data.getString("recovery_rate");
                             String fatality_rate = data.getString("fatality_rate");
-                            String recoveryR = String.format("%.2f", Float.parseFloat(recovery_rate));
-                            String fatalityR = String.format("%.2f", Float.parseFloat(fatality_rate));
+                            //String recoveryR = String.format("%.2f", Float.parseFloat(recovery_rate));
+                            //String fatalityR = String.format("%.2f", Float.parseFloat(fatality_rate));
 
-                            String today_recovered = "Recovered: " + todayRecovered;
-                            String today_confirmed = "Confirmed: " + todayConfirmed;
+                            String today_cases = "Cases: " + todayCases;
                             String today_deaths = "Deaths: " + todayDeaths;
+                            String today_recovered = "Recoveries: " + todayRecoveries;
 
-                            String totalC = "Cases: " + totalCasesph;
-                            String totalA = "Admitted: " + totalAdmittedph;
-                            String totalR = "Recoveries: " + totalRecoveryph;
-                            String totalD = "Deaths: " + totalDeathsph;
+                            String phAdmitted = "Admitted: " + admitted;
+                            String phCases = "Cases: " + cases;
+                            String phDeaths = "Deaths: " + deaths;
+                            String phRecoveries = "Recoveries: " + recoveries;
 
-                            String rr = "Recovery Rate: " + recoveryR + "%";
-                            String fr = "Fatality Rate: " + fatalityR + "%";
+                            String rr = "Recovery Rate: " + recovery_rate;
+                            String fr = "Fatality Rate: " + fatality_rate;
 
-                            todayRecoveredText.setText(today_recovered);
-                            todayConfirmedText.setText(today_confirmed);
+                            String updated_at = data.getString("last_update");
+                            String parsed = parseDate(updated_at);
+                            updatedAt.setText(parsed);
+
+                            //String rr = "Recovery Rate: " + recoveryR + "%";
+                            //String fr = "Fatality Rate: " + fatalityR + "%";
+
+                            todayConfirmedText.setText(today_cases);
                             todayDeathsText.setText(today_deaths);
-                            totalCases.setText(totalC);
-                            totalAdmitted.setText(totalA);
-                            totalRecoveries.setText(totalR);
-                            totalDeaths.setText(totalD);
+                            todayRecoveredText.setText(today_recovered);
+
+                            totalAdmitted.setText(phAdmitted);
+                            totalCases.setText(phCases);
+                            totalDeaths.setText(phDeaths);
+                            totalRecoveries.setText(phRecoveries);
+
                             recoveryRate.setText(rr);
                             fatalityRate.setText(fr);
 
@@ -146,27 +158,23 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void getTodayPH_2() {
-        String url = "https://corona-api.com/countries/PH?include=timeline";
+    public void getLocalData_more() {
+        String url = "https://corona-api.com/countries/PH";
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject jsonObject = response.getJSONObject("data");
+                            JSONObject data = response.getJSONObject("data");
 
-                            String updated_at = jsonObject.getString("updated_at");
-                            int phPop = jsonObject.getInt("population");
-
+                            String updated_at = data.getString("updated_at");
+                            int phPop = data.getInt("population");
                             String latestPhPop = "Population: " + Long.parseLong(String.valueOf(phPop));
-                            phPopulation.setText(latestPhPop);
 
-                            String parsed = parseDate(updated_at);
-                            updatedAt.setText(parsed);
+                            String parsed = parseDateGlobal(updated_at);
                             updatedAtGlobal.setText(parsed);
-
-                            getLatestGlobal(jsonObject);
+                            phPopulation.setText(latestPhPop);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -181,8 +189,7 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-
-    public void getDataGlobal() {
+    public void getGlobalData() {
         String url = "https://covidapi.info/api/v1/global";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -190,13 +197,13 @@ public class OverviewFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject jsonObject = response.getJSONObject("result");
-                            int globalRecovered = jsonObject.getInt("recovered");
-                            int globalConfirmed = jsonObject.getInt("confirmed");
-                            int globalDeaths = jsonObject.getInt("deaths");
+                            JSONObject result = response.getJSONObject("result");
+                            int globalRecovered = result.getInt("recovered");
+                            int globalConfirmed = result.getInt("confirmed");
+                            int globalDeaths = result.getInt("deaths");
 
                             String recovered = "Recovered: " + globalRecovered;
-                            String confirmed = "Confirmed: " + globalConfirmed;
+                            String confirmed = "Cases: " + globalConfirmed;
                             String deaths = "Deaths: " + globalDeaths;
 
                             globalRecoveredtv.setText(recovered);
@@ -216,32 +223,33 @@ public class OverviewFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    public void getDataPH() {
-        String url = "https://coronavirus-ph-api.herokuapp.com/cases";
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONArray>() {
+    public void getLocalCaseData() {
+        String url = "https://coronavirus-ph-api.herokuapp.com/doh-data-drop";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONArray response) {
+                    public void onResponse(JSONObject response) {
                         try {
-                            casesArrayList = new ArrayList<>();
-                            ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
-                            if (response.length() > 0) {
-                                for (int i = 0; i < response.length(); i++) {
-                                    String phCaseNo = response.getJSONObject(i).getString("case_no");
-                                    String phDate = response.getJSONObject(i).getString("date");
-                                    String phAge = response.getJSONObject(i).getString("age");
-                                    String phGender = response.getJSONObject(i).getString("gender");
-                                    String phNationality = response.getJSONObject(i).getString("nationality");
-                                    String phHospital = response.getJSONObject(i).getString("hospital_admitted_to");
-                                    String phTravelHistory = response.getJSONObject(i).getString("travel_history");
-                                    String phStatus = response.getJSONObject(i).getString("status");
-                                    String phLat = response.getJSONObject(i).getString("latitude");
-                                    String phLong = response.getJSONObject(i).getString("longitude");
-                                    String phResident = response.getJSONObject(i).getString("resident_of");
+                            JSONArray data = response.getJSONArray("data");
+                            if (data.length() > 0) {
+                                for (int i = 0; i < data.length(); i++) {
+                                    JSONObject n = data.getJSONObject(i);
 
-                                    casesArrayList.add(new TrackerChart(phCaseNo, phDate, phAge, phGender, phNationality, phHospital, phTravelHistory, phStatus, phLat, phLong, phResident));
+                                    String phCaseCode = n.getString("case_code");
+                                    String phAge = n.getString("age");
+                                    String phSex = n.getString("sex");
+                                    String phAdmitted = n.getString("is_admitted");
+                                    String phDateReported = n.getString("date_reported");
+                                    String phDateDied = n.getString("date_died");
+                                    String phRecovered = n.getString("recovered_on");
+                                    String phLocation = n.getString("location");
+                                    String phLat = n.getString("latitude");
+                                    String phLong = n.getString("longitude");
+
+                                    casesArrayList.add(new TrackerChart(phCaseCode, phAge, phSex, phAdmitted, phDateReported, phDateDied, phRecovered, phLocation, phLat, phLong));
                                 }
-                                recyclerView1.setAdapter(chartAdapter);
+                                ChartAdapter chartAdapter = new ChartAdapter(getActivity(), casesArrayList);
+                                localCaseData.setAdapter(chartAdapter);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -254,25 +262,6 @@ public class OverviewFragment extends Fragment {
             }
         });
         requestQueue.add(request);
-    }
-
-    public void getLatestGlobal(JSONObject jsonObject) throws JSONException {
-        JSONObject latest_data = jsonObject.getJSONObject("latest_data");
-
-        int recovered = latest_data.getInt("recovered");
-        int confirmed = latest_data.getInt("confirmed");
-        int critical = latest_data.getInt("critical");
-        int deaths = latest_data.getInt("deaths");
-
-        String latest_recovered = "Recovered: " + recovered;
-        String latest_confirmed = "Confirmed: " + confirmed;
-        String latest_critical = "Critical: " + critical;
-        String latest_deaths = "Deaths: " + deaths;
-
-        text2.setText(latest_recovered);
-        text1.setText(latest_confirmed);
-        text3.setText(latest_critical);
-        text0.setText(latest_deaths);
     }
 
     public String parseTime(String time) {
@@ -294,7 +283,29 @@ public class OverviewFragment extends Fragment {
     }
 
     public String parseDate(String time) {
+        String inputPattern = "yyyy-MM-dd";
+        //String inputPattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+        //String outputPattern = "EEE, MMM dd, HH:ss";
+        String outputPattern = "EEE, MMM dd, yyyy";
+        //String outputPattern = "EEE, MMMM dd, yyyy hh:mm a";
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return "(as of " + str + ")";
+    }
+
+    public String parseDateGlobal(String time) {
         String inputPattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+        //String outputPattern = "EEE, MMM dd, HH:ss";
         String outputPattern = "EEE, MMM dd, HH:ss";
         //String outputPattern = "EEE, MMMM dd, yyyy hh:mm a";
         SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
@@ -309,6 +320,6 @@ public class OverviewFragment extends Fragment {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return "(" + str + ")";
+        return "(as of " + str + ")";
     }
 }

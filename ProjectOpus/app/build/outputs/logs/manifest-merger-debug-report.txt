@@ -5,6 +5,7 @@ INJECTED from C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\
 INJECTED from C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:2:1-29:12
 INJECTED from C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.github.javiersantos:AppUpdater:2.7] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\6e1c50c48209150689132f6753b29aa9\jetified-AppUpdater-2.7\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\0db5d88c6118bc4cacdf0d6360754bcc\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\f262923402dad6cf015f35bad166cdee\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\ae67d481176994a76afa6f312b4e8a78\material-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\ef8a364a6a39421e69c96cf68eeb3e63\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -132,6 +133,8 @@ INJECTED from C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\
 INJECTED from C:\Users\Asus\Documents\GitHub\OpusTrack\ProjectOpus\app\src\main\AndroidManifest.xml
 MERGED from [com.github.javiersantos:AppUpdater:2.7] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\6e1c50c48209150689132f6753b29aa9\jetified-AppUpdater-2.7\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.javiersantos:AppUpdater:2.7] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\6e1c50c48209150689132f6753b29aa9\jetified-AppUpdater-2.7\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\0db5d88c6118bc4cacdf0d6360754bcc\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\0db5d88c6118bc4cacdf0d6360754bcc\preference-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\f262923402dad6cf015f35bad166cdee\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\f262923402dad6cf015f35bad166cdee\navigation-ui-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\ae67d481176994a76afa6f312b4e8a78\material-1.1.0\AndroidManifest.xml:20:5-44
