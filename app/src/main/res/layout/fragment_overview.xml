@@ -44,7 +44,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:fontFamily="@font/montserrat_bold"
-                            android:text="Philippine All-Time Data"
+                            android:text="PH All-Time Data"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
@@ -380,7 +380,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/casesContainer"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
@@ -388,6 +388,15 @@
                 android:background="@color/colorPrimaryDark"
                 android:orientation="vertical"
                 android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="THIS SECTION IS UNDER CONSTRUCTION"/>
 
             </LinearLayout>
         </RelativeLayout>
