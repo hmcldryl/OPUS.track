@@ -1,6 +1,4 @@
-package com.tracker.projectopus;
-
-import java.util.Date;
+package com.tracker.tracker;
 
 public class TrackerChart {
 

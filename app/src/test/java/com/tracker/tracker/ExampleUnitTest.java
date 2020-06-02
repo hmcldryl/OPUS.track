@@ -1,4 +1,4 @@
-package com.tracker.projectopus;
+package com.tracker.tracker;
 
 import org.junit.Test;
 

@@ -1,16 +1,16 @@
-package com.tracker.projectopus.ui.about;
+package com.tracker.tracker.ui.covid;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AboutViewModel extends ViewModel {
+public class CovidViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public AboutViewModel() {
+    public CovidViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is timeline fragment");
+        mText.setValue("This is covid fragment");
     }
 
     public LiveData<String> getText() {

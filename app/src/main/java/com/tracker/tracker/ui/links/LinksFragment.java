@@ -1,4 +1,4 @@
-package com.tracker.projectopus.ui.links;
+package com.tracker.tracker.ui.links;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,14 +6,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.tracker.projectopus.R;
-import com.tracker.projectopus.ui.about.AboutViewModel;
+import com.tracker.tracker.R;
+import com.tracker.tracker.ui.about.AboutViewModel;
 
 public class LinksFragment extends Fragment {
     private AboutViewModel aboutViewModel;

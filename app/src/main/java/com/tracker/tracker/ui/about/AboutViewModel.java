@@ -1,16 +1,16 @@
-package com.tracker.projectopus.ui.home;
+package com.tracker.tracker.ui.about;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class OverviewViewModel extends ViewModel {
+public class AboutViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public OverviewViewModel() {
+    public AboutViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is timeline fragment");
     }
 
     public LiveData<String> getText() {

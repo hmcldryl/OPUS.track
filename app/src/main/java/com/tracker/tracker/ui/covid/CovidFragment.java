@@ -1,4 +1,4 @@
-package com.tracker.projectopus.ui.covid;
+package com.tracker.tracker.ui.covid;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,13 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.tracker.projectopus.R;
+import com.tracker.tracker.R;
 
 
 public class CovidFragment extends Fragment {

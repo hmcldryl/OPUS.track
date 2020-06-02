@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_covid"
-        android:name="com.tracker.projectopus.ui.covid.CovidFragment"
+        android:name="com.tracker.tracker.ui.covid.CovidFragment"
         android:label="About COVID-19"
         tools:layout="@layout/fragment_covid"/>
 
     <fragment
         android:id="@+id/nav_overview"
-        android:name="com.tracker.projectopus.ui.home.OverviewFragment"
+        android:name="com.tracker.tracker.ui.home.OverviewFragment"
         android:label="Overview"
         tools:layout="@layout/fragment_overview"/>
 
     <fragment
         android:id="@+id/nav_links"
-        android:name="com.tracker.projectopus.ui.links.LinksFragment"
+        android:name="com.tracker.tracker.ui.links.LinksFragment"
         android:label="Useful Links"
         tools:layout="@layout/fragment_links" />
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.tracker.projectopus.ui.about.AboutFragment"
+        android:name="com.tracker.tracker.ui.about.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_links" />
 </navigation>
