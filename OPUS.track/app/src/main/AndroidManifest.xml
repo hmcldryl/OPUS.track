@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tracker.tracker">
+    package="com.opus.tracker">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -17,7 +17,7 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name="com.tracker.tracker.MainActivity">
+        <activity android:name="com.opus.tracker.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
