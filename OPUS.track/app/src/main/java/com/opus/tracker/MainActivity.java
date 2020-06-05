@@ -1,4 +1,4 @@
-package com.tracker.tracker;
+package com.opus.tracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;

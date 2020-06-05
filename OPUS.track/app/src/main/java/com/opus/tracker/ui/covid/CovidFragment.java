@@ -1,4 +1,4 @@
-package com.tracker.tracker.ui.covid;
+package com.opus.tracker.ui.covid;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.tracker.tracker.R;
+import com.opus.tracker.R;
 
 
 public class CovidFragment extends Fragment {

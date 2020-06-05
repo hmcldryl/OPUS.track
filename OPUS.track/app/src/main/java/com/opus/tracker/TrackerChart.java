@@ -1,4 +1,4 @@
-package com.tracker.tracker;
+package com.opus.tracker;
 
 public class TrackerChart {
 

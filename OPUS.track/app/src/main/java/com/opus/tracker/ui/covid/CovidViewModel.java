@@ -1,4 +1,4 @@
-package com.tracker.tracker.ui.covid;
+package com.opus.tracker.ui.covid;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

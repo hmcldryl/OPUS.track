@@ -1,4 +1,4 @@
-package com.tracker.tracker.ui.links;
+package com.opus.tracker.ui.links;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

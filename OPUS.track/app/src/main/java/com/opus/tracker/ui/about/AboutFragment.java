@@ -1,4 +1,4 @@
-package com.tracker.tracker.ui.about;
+package com.opus.tracker.ui.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,9 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
-import com.tracker.tracker.R;
+import com.opus.tracker.R;
 
 public class AboutFragment extends Fragment {
+
     private AboutViewModel aboutViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
