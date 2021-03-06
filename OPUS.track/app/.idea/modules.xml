@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1777236492/OPUS.track.iml" filepath="$PROJECT_DIR$/.idea/modules/-1777236492/OPUS.track.iml" group="OPUS.track" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OPUS.track-app.iml" filepath="$PROJECT_DIR$/.idea/modules/OPUS.track-app.iml" group="OPUS.track/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/510678519/ProjectOpus.iml" filepath="$PROJECT_DIR$/.idea/modules/510678519/ProjectOpus.iml" group="ProjectOpus" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="ProjectOpus/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1496125958/OPUS.track.iml" filepath="$PROJECT_DIR$/.idea/modules/-1496125958/OPUS.track.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OPUS.track.app.iml" filepath="$PROJECT_DIR$/.idea/modules/OPUS.track.app.iml" />
     </modules>
   </component>
 </project>
