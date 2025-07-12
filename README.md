@@ -26,9 +26,14 @@ The goal was to deliver a reliable and user-friendly tracker tailored for both *
 - **Frontend:** Android (Java)  
 - **Backend:** Firebase Realtime Database  
 - **APIs:**  
-  - [Disease.sh](https://disease.sh/)  
-  - [COVID19API](https://covid19api.com/)  
-  - Local sources (e.g., Palawan LGU data, health office bulletins, scraped info)  
+  - [Disease.sh](https://disease.sh/)
+  - [COVID-19 Statistics API](https://covid-api.com/)
+  - [CovidAPI](https://github.com/backtrackbaba/covid-api)
+  - [sorxrob/coronavirus-ph-api](https://github.com/sorxrob/coronavirus-ph-api)
+  - [sorxrob/2019-ncov-api](https://github.com/sorxrob/2019-ncov-api)
+  - [About-Corona](https://about-corona.net/)
+  - [GHO OData API](https://www.who.int/data/gho/info/gho-odata-api)
+  - [DOH COVID-19 CASE TRACKER](https://www.doh.gov.ph/covid-19/case-tracker)
 
 
 ## 📸 Screenshots  
@@ -43,7 +48,7 @@ The goal was to deliver a reliable and user-friendly tracker tailored for both *
 ## 🤝 Acknowledgements
 Huge thanks to the following for providing open and free access to data:
 - disease.sh
-- COVID19API
+- CovidAPI
 - Department of Health Philippines
 - Palawan LGU and health authorities
 - Firebase by Google
