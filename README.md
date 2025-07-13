@@ -51,7 +51,6 @@ Huge thanks to the following for providing open and free access to data:
 - CovidAPI
 - Department of Health Philippines
 - Palawan LGU and health authorities
-- Firebase by Google
 
 
 ## 📜 Disclaimer
